@@ -1,28 +1,20 @@
+import { createStore, combineReducers, compose } from 'redux';
+import { reduxReactFirebase, firebaseStateReducer } from 'redux-react-firebase';
 
-import { createStore, compose } from 'redux'
-import rootReducer from './reducers/firebasereducer.js'
-import { firebase as fbConfig } from './firebase.config.js'
-import { reactReduxFirebase } from 'react-redux-firebase'
+const rootReducer = combineReducers({
+  firebase: firebaseStateReducer,
+});
 
-export default function configureStore (initialState, history) {
-  const createStoreWithMiddleware = compose(
-    reactReduxFirebase(fbConfig,
-      {
-        userProfile: 'users',
-        enableLogging: false
-      }
-    ),
-    typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
-  )(createStore)
-  const store = createStoreWithMiddleware(rootReducer)
+const config = {
+  apiKey: 'AIzaSyDE-k5mSHBauXLEenA_VhZvpBSJFZ8XgMg',
+  authDomain: 'personal-project-3c259.firebaseapp.com',
+  databaseURL: 'https://personal-project-3c259.firebaseio.com',
+  storageBucket: 'personal-project-3c259.appspot.com',
+  messagingSenderId: '100075585149',
+};
+const createStoreWithFirebase = compose(
+    reduxReactFirebase(config),
+)(createStore);
 
-  if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
-    module.hot.accept('./reducers/firebasereducer.js', () => {
-      const nextRootReducer = require('./reducers/firebasereducer.js')
-      store.replaceReducer(nextRootReducer)
-    })
-  }
 
-  return store
-}
+export default initialState => createStoreWithFirebase(rootReducer, initialState);

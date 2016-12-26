@@ -1,70 +1,76 @@
-import React, { Component, PropTypes } from 'react'
-import './App.css'
-import BarrelRace from './BarrelRace'
+import React, {Component, PropTypes} from 'react'
+import { Provider } from 'react-redux'
+import {connect} from 'react-redux'
+import {firebase, helpers} from 'redux-react-firebase'
+import _ from 'lodash'
 
-// redux/firebase
-import { connect } from 'react-redux'
-import { firebaseConnect, helpers } from 'react-redux-firebase'
-const { isLoaded, isEmpty, pathToJS, dataToJS } = helpers
 
-class App extends Component {
-  static propTypes = {
-    barrelraces: PropTypes.object,
-    firebase: PropTypes.shape({
-      push: PropTypes.func.isRequired
-    })
-  }
+const {isLoaded, isEmpty, dataToJS} = helpers
 
-  handleAdd = () => {
-    const { firebase } = this.props
-    const { newRace } = this.refs
-    firebase.push('/barrelraces', { title: newRace.value })
-    newRace.value = ''
-  }
+@firebase()
+class IndividualEvent extends Component {
+  render(){
+    const {firebase, barrelraces, id} = this.props
 
-  render () {
-    const { barrelraces } = this.props
-
-    console.log('barrelraces:', barrelraces)
-
-    const barrelracesList = (!isLoaded(barrelraces))
-                        ? 'Loading'
-                        : (isEmpty(barrelraces))
-                          ? 'No races to show'
-                          : Object.keys(barrelraces).map((key) => (
-                            <BarrelRace key={key} id={key} barrelrace={barrelraces[key]} />
-                          ))
+    const deleteEvent = (barrelrace) => {
+       firebase.remove(`/barrelraces/${id}`)
+    }
     return (
-      <div className='App'>
-        <div className='App-header'>
-          <h2>BarrelBash</h2>
-        </div>
-        <div className='App-barrelraces'>
-          <h4>Todos List</h4>
-          {barrelracesList}
-          <h4>New Race</h4>
-          <input type='text' ref='newRace' />
-          <button onClick={this.handleAdd}>
-            Add
-          </button>
-        </div>
+      <li>
+        {barrelrace.name}
+        <button onClick={deleteEvent}>Delete</button>
+      </li>)
+  }
+}
+
+
+@firebase( [
+  '/barrelraces', // if list is too large you can use ['/todos']
+])
+@connect(
+  ({firebase}) => ({
+    barrelraces: dataToJS(firebase, '/barrelraces'),
+  })
+)
+class EventList extends Component {
+
+  render() {
+    const {firebase, barrelraces} = this.props;
+
+    const handleAdd = () => {
+      const {newEvent} = this.refs
+      firebase.push('/barrelraces', {text:newEvent.value})
+      newEvent.value = ''
+    }
+
+    const eventList = (!isLoaded(barrelraces)) ?
+                          'Loading'
+                        : (isEmpty(barrelraces)) ?
+                               'list is empty'
+                             : _.map(barrelraces, (barrelrace, id) => (<IndividualEvent key={id} id={id} barrelrace={barrelrace}/>) )
+
+    return (
+      <div>
+        <h1>Todos</h1>
+        <ul>
+          {EventList}
+        </ul>
+        <input type="text" ref="newEvent" />
+        <button onClick={handleAdd}>Add</button>
       </div>
     )
   }
-}
-const fbWrappedComponent = firebaseConnect([
-  // '/barrelraces'
-  // { type: 'once', path: '/barrelraces' } // for loading once instead of binding
-  // '/barrelraces#populate=owner:displayNames' // for populating owner parameter from id into string loaded from /displayNames root
-  // '/barrelraces#populate=collaborators:users' // for populating owner parameter from id to user object loaded from /users root
-  { path: 'barrelraces', populates: [{ child: 'collaborators', root: 'users' }] } // object notation
-  // '/barrelraces#populate=owner:users:displayName' // for populating owner parameter from id within to displayName string from user object within users root
-])(App)
 
-export default connect(
-  ({ firebase }) => ({
-    barrelraces: dataToJS(firebase, 'barrelraces'),
-    profile: pathToJS(firebase, 'profile'),
-    auth: pathToJS(firebase, 'auth')
-  })
-)(fbWrappedComponent)
+}
+
+
+export default class App extends Component {
+
+  render () {
+    return (
+        <Provider store={this.props.store}>
+          <EventList/>
+        </Provider>
+    );
+  }
+}

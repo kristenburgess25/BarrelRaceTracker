@@ -3,7 +3,7 @@ import { firebase } from 'react-redux-firebase'
 
 class BarrelRace extends Component {
   static propTypes = {
-    todo: PropTypes.object,
+    barrelrace: PropTypes.object,
     id: PropTypes.string
   }
 
