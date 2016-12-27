@@ -1,15 +1,13 @@
 import React from 'react';
-import { render, ReactDOM } from 'react-dom';
-import Routes from './routes';
-import App from './components/App';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './containers/AppContainer';
+import store from './store';
 
-import configureStore from './store';
-// const initialState = window.__INITIAL_STATE__ || { firebase: { authError: null } };
+const main = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
 
-const store = configureStore();
-
-const target = document.getElementById('root');
-
-const node = (<App store={store} />);
-
-ReactDOM.render(node, target);
+ReactDOM.render(main, document.getElementById('root'));

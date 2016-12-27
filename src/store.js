@@ -1,20 +1,13 @@
-import { createStore, combineReducers, compose } from 'redux';
-import { reduxReactFirebase, firebaseStateReducer } from 'redux-react-firebase';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import createLogger from 'redux-logger';
+import rootReducer from './reducers/root_reducer';
 
-const rootReducer = combineReducers({
-  firebase: firebaseStateReducer,
-});
+const logger = createLogger();
 
-const config = {
-  apiKey: 'AIzaSyDE-k5mSHBauXLEenA_VhZvpBSJFZ8XgMg',
-  authDomain: 'personal-project-3c259.firebaseapp.com',
-  databaseURL: 'https://personal-project-3c259.firebaseio.com',
-  storageBucket: 'personal-project-3c259.appspot.com',
-  messagingSenderId: '100075585149',
-};
-const createStoreWithFirebase = compose(
-    reduxReactFirebase(config),
-)(createStore);
+const store = createStore(rootReducer,
+  {},
+  applyMiddleware(thunk, logger),
+);
 
-
-export default initialState => createStoreWithFirebase(rootReducer, initialState);
+export default store;

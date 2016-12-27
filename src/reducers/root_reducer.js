@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { firebaseStateReducer as firebase } from 'react-redux-firebase';
+import { raceReducer } from './race_reducer';
 
 const rootReducer = combineReducers({
-  firebase
+  race: raceReducer,
 });
 
 export default rootReducer;
