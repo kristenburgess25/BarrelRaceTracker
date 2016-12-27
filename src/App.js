@@ -31,7 +31,11 @@ class App extends Component {
         <div className="App-header">
           <h2>Barrel Bash</h2>
           <input placeholder='SEARCH'></input>
-          <p className='favorites'> Favorites </p>
+          <button className='favorites'> Favorites
+          </button>
+          <button className='addEvent-btn'>
+            Add Event
+          </button>
         </div>
         <EventList
           eventList={this.state.eventList}
