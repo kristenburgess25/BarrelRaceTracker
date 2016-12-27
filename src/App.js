@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import EventList from './EventList';
+import DisplayEvent from './DisplayEvent'
+
 import { pick, map, extend } from 'lodash';
 import firebase, { reference } from './firebase';
 
@@ -9,7 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      barrelraces: [],
+      eventList: [],
     };
   }
 
@@ -17,19 +19,22 @@ class App extends Component {
   reference.on('value', (snapshot) => {
     const barrelraces = snapshot.val() || {};
     this.setState({
-      barrelraces: map(barrelraces, (val, key) => extend(val, { key, name }))
+      eventList: map(barrelraces, (val, key) => extend(val, { key, name }))
     });
   });
 }
 
   render() {
+
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Barrel Bash</h2>
         </div>
-        <EventList />
+        <EventList
+          eventList={this.state.eventList}
+        />
       </div>
     );
   }

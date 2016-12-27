@@ -3,11 +3,21 @@ import DisplayEvent from './DisplayEvent'
 
 class EventList extends Component {
   render() {
+
+    const { eventList } = this.props;
+
+    let events = eventList.map(event =>
+      <DisplayEvent
+        key={event.key}
+        event={event}
+      />
+    )
+
     return (
       <div className="EventList">
         <div>
           <h2>BARREL RACES</h2>
-          <DisplayEvent />
+          { events }
         </div>
       </div>
     );
