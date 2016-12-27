@@ -11,12 +11,17 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: teal;
 }
 
 .App-intro {
   font-size: large;
 }
+
+.favorites {
+  color: yellow;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

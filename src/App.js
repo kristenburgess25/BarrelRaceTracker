@@ -29,12 +29,17 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h2>Barrel Bash</h2>
+          <input placeholder='SEARCH'></input>
+          <p className='favorites'> Favorites </p>
         </div>
         <EventList
           eventList={this.state.eventList}
         />
+      <footer>
+        <p> Sort </p>
+        <p> Filter </p>
+      </footer>
       </div>
     );
   }

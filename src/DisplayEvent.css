@@ -1,4 +1,9 @@
 h4 {
-  background-color: black;
+  background-color: teal;
   color: white;
+  text-align: left;
+}
+
+div {
+  padding: 20px 0px;
 }
