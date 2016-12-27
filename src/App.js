@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import EventList from './EventList';
 import DisplayEvent from './DisplayEvent'
-
+import { Link } from 'react-router'
 import { pick, map, extend } from 'lodash';
 import firebase, { reference } from './firebase';
 
@@ -31,9 +31,15 @@ class App extends Component {
         <div className="App-header">
           <h2>Barrel Bash</h2>
           <input placeholder='SEARCH'></input>
-          <button className='favorites'> Favorites
+          <button className='favorites'>
+            <Link
+              to="/favorites"
+              className="favorites-btn">
+              Favorites
+            </Link>
           </button>
-          <button className='addEvent-btn'>
+          <button
+            className='addEvent-btn'>
             Add Event
           </button>
         </div>
