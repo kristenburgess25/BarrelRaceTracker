@@ -24,6 +24,18 @@ class App extends Component {
   });
 }
 
+markFavorite () {
+  this.state.eventList.map(event => {
+        if(key === event.key) {
+          firebase.database().ref(`${key}`).update({
+            favorite: !event.favorite
+          })
+        } else {
+          return
+        }
+      })
+    }
+
   render() {
 
     return (

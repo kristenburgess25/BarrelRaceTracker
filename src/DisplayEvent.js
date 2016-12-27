@@ -15,6 +15,8 @@ toggleHideDisplay() {
   })
 }
 
+
+
   render() {
     const { event }  = this.props;
 
@@ -26,6 +28,11 @@ toggleHideDisplay() {
           <h4> Event </h4>
             <p> {event.title} </p>
             <p> {event.date} </p>
+            <button
+              onClick={() => this.props.markFavorite(event.key)}
+              >
+              FAVORITE
+            </button>
           <h4> Location </h4>
             <p> {event.location} </p>
             <p> {event.city}, {event.state}</p>

@@ -10,6 +10,7 @@ class EventList extends Component {
       <DisplayEvent
         key={event.key}
         event={event}
+        markFavorite={this.props.markFavorite}
       />
     )
 
