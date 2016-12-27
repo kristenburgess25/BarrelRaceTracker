@@ -1,6 +1,6 @@
 {
   "barrelraces" : {
-"1" : {
+"0" : {
   "title":"NE Co-Approved 4D Run",
   "location":"Kiplinger Arena",
   "state":"NE",
@@ -15,7 +15,7 @@
   "contactNumber":"785-543-7829",
   "description":""},
 
-"2" : {
+"1" : {
   "title":"NE Co-Approved 4D Run",
   "location":"Kiplinger Arena",
   "state":"NE",
@@ -29,7 +29,7 @@
   "contactName":"Deb Christy",
   "contactNumber":"785-543-7829",
   "description":""},
-"3" : {
+"2" : {
   "title":"NE Co-Approved 4D Run",
   "location":"Kiplinger Arena",
   "state":"NE",
@@ -43,7 +43,7 @@
   "contactName":"Deb Christy",
   "contactNumber":"785-543-7829",
   "description":""},
-"4" : {
+"3" : {
   "title":"NE Co-Approved 4D Run",
   "location":"Kiplinger Arena",
   "state":"NE",
@@ -57,7 +57,7 @@
   "contactName":"Deb Christy",
   "contactNumber":"785-543-7829",
   "description":""},
-"5" : {
+"4" : {
   "title":"Go Big Or Go Home Saddle Series",
   "location":"1145 US-56 Hwy",
   "state":"KS",
@@ -71,7 +71,7 @@
   "contactName":"Brady Gipson",
   "contactNumber":"620-245-7552 ",
   "description":""},
-"6" : {
+"5" : {
   "title":"Go Big Or Go Home Saddle Series",
   "location":"1145 US-56 Hwy",
   "state":"KS",
@@ -85,7 +85,7 @@
   "contactName":"Brady Gipson",
   "contactNumber":"620-245-7552",
   "description":""},
-"7" : {
+"6" : {
   "title":"MP3 Barrel Productions Bonus Series Race # 2",
   "location":"301 Wilbarger ST",
   "state":"TX",
@@ -99,7 +99,7 @@
   "contactName":"Penni Pepps",
   "contactNumber":"940-636-4930",
   "description":""},
-"8" : {
+"7" : {
   "title":"Sandhills Showdown",
   "location":"44100 MEMORIAL DRIVE",
   "state":"NE",
@@ -113,7 +113,7 @@
   "contactName":"Katy Petree",
   "contactNumber":"402-803-0616",
   "description":"$6000 ADDED 5D BARREL RACE PEEWEE, YOUTH, OPEN SIDE POTS ARE ADULT, SENIOR, AND FUTURITY EF PEEWEE $5, YOUTH $20, OPEN $40, SIDEPOTS $25 RUN WITH OPEN (SATURDAY ONLY) EXHIBITIONS $5 HOOKUPS $20/NIGHT, STALLS $20 OR $35 FOR 2 NIGHTS, SHAVINGS $9 OR BRING YOUR OWN ALL STALLS MUST HAVE SHAVINGS FRIDAY--EXHIBITIONS @4 RUN @7 SATURDAY--EXHIBITIONS @9 RUN @12 SUNDAY-- EHIBITIONS @9 RUN @11 "},
-"9" : {
+"8" : {
   "title":"Sandhills Showdown",
   "location":"44100 MEMORIAL DRIVE",
   "state":"NE",
@@ -127,7 +127,7 @@
   "contactName":"Katy Petree",
   "contactNumber":"402-803-0616",
   "description":"$6000 ADDED 5D BARREL RACE PEEWEE, YOUTH, OPEN SIDE POTS ARE ADULT, SENIOR, AND FUTURITY EF PEEWEE $5, YOUTH $20, OPEN $40, SIDEPOTS $25 RUN WITH OPEN (SATURDAY ONLY) EXHIBITIONS $5 HOOKUPS $20/NIGHT, STALLS $20 OR $35 FOR 2 NIGHTS, SHAVINGS $9 OR BRING YOUR OWN ALL STALLS MUST HAVE SHAVINGS FRIDAY--EXHIBITIONS @4 RUN @7 SATURDAY--EXHIBITIONS @9 RUN @12 SUNDAY-- EHIBITIONS @9 RUN @11"},
-"10" : {
+"9" : {
   "title":"BARREL BASH (TM) AND ALL GIRL RODEO",
   "location":"LUCKY J ARENA, 11664 Fir Rd",
   "state":"MO",
@@ -141,7 +141,7 @@
   "contactName":"RENEA BOLLING",
   "contactNumber":"918-617-0660",
   "description":"$2500 ADDED BARREL BASH AND ALL GIRL RODEO PLEASE SEE OUR WEBSITE FMI http://www.barrelbash.com/"},
-"11" : {
+"10" : {
   "title":"BARREL BASH (TM) AND ALL GIRL RODEO",
   "location":"LUCKY J ARENA, 11664 Fir Rd",
   "state":"MO",
@@ -155,7 +155,7 @@
   "contactName":"RENEA BOLLING",
   "contactNumber":"918-617-0660",
   "description":"$2500 ADDED BARREL BASH AND ALL GIRL RODEO PLEASE SEE OUR WEBSITE FMI http://www.barrelbash.com/"},
-"12" : {
+"11" : {
   "title":"BARREL BASH (TM) AND ALL GIRL RODEO",
   "location":"LUCKY J ARENA, 11664 Fir Rd",
   "state":"MO",
@@ -169,7 +169,7 @@
   "contactName":"RENEA BOLLING",
   "contactNumber":"918-617-0660",
   "description":"$2500 ADDED BARREL BASH AND ALL GIRL RODEO PLEASE SEE OUR WEBSITE FMI http://www.barrelbash.com/"},
-"13" : {
+"12" : {
   "title":" Marchant Hills Winter Saddle Series",
   "location":"9900 Marchant Road",
   "state":"AR",
@@ -183,7 +183,7 @@
   "contactName":"bettie marchant",
   "contactNumber":"479-236-0709",
   "description":"To preenter text Name and Number of entries to 479-313-1930 "},
-"14" : {
+"13" : {
   "title":"BRIDLE CREEK ~ WildNotions",
   "location":"BRIDLE CREEK ARENA",
   "state":"OK",
@@ -197,7 +197,7 @@
   "contactName":"CINDY WOODWORTH",
   "contactNumber":"9186366571",
   "description":""},
-"15" : {
+"14" : {
   "title":"WLBRA Open 5-D $500 Added Barrel Race",
   "location":"Red River Cowboy Church Arena",
   "state":"LA",
@@ -211,7 +211,7 @@
   "contactName":"Brenda Roark",
   "contactNumber":"3183936066 ",
   "description":""},
-"16" : {
+"15" : {
   "title":"NBHA AL01 New Years Bash",
   "location":"Morgan County Celebration Arena",
   "state":"AL",
@@ -225,7 +225,7 @@
   "contactName":"Russell Tucker",
   "contactNumber":"2053295080",
   "description":""},
-"17" : {
+"16" : {
   "title":"NBHA AL01 New Years Bash",
   "location":"Morgan County Celebration Arena",
   "state":"AL",
@@ -239,7 +239,7 @@
   "contactName":"Russell Tucker",
   "contactNumber":"2053295080",
   "description":""},
-"18" : {
+"17" : {
   "title":"NBHA AL01 New Years Bash",
   "location":"Morgan County Celebration Arena",
   "state":"AL",
@@ -253,7 +253,7 @@
   "contactName":"Russell Tucker",
   "contactNumber":"2053295080",
   "description":""},
-"19" : {
+"18" : {
   "title":"MCHC NEW Year’s \u000bBARREL RACE JACKPOT",
   "location":"Friendship Lane",
   "state":"TX",
@@ -267,7 +267,7 @@
   "contactName":"Denise Taylor",
   "contactNumber":"8325456113 ",
   "description":"\u000b5D OPEN, 3D YOUTH & Peewee\u000b Sunday, Jan 1st, 2017\u000b 8:00am Books Open (Pre-Entries Dec 28th) 8:30-9:45am Exhibitions poles 10:00am Poles (Open/Youth/Peewee) Exhibition Barrels Immediately following poles 2:00pm Barrel Race Starts (Open/Youth/Peewee) Fees: *No office charges Exhibition Poles/Barrels $5 each Open Poles $20 Youth Poles $15 Peewee Poles $10 (7 & under) Open Barrels $30 Youth Barrels $20 Peewee Barrels $10 (7 & under) Location: Magnolia Arena Friendship Lane, Magnolia, TX 77355 Pre-entries contact Michelle Epps 281-610-2177 (must be paid 30mins prior to run) Volunteers, Vendors & Donations contact Denise"},
-"20" : {
+"19" : {
   "title":"Southern Pride $500 added New Years Day Ride",
   "location":"Foothills Arena",
   "state":"AR",
@@ -281,7 +281,7 @@
   "contactName":"TYLER Roberts",
   "contactNumber":"479-790-0298 ",
   "description":""},
-"21" : {
+"20" : {
   "title":"Lazy D Ranch Tuesday Night Barrel Racing",
   "location":"Lazy D Ranch, 7114 S 145th W Ave",
   "state":"OK",
@@ -295,7 +295,7 @@
   "contactName":"Mike Davis",
   "contactNumber":"918-625-9769",
   "description":"Tuesday Night Barrel Racing Jackpot Lazy D Ranch – Sapulpa Exhibitions 6:00 PM / Youth Race @ 8pm Open will Race will immediately follow Youth Youth 3D (14&Under) $20.00 entry fee 80% payback Full second split Open 4D Barrel Race $30.00 entry fee ½ second split 80% payback Full service concessions Groundhog Arena Drag Plenty of gravel parking available Full RV hookup available Contact – Mike Davis – 918-625-9769 / Karen Davis – 918-760-3365 Text Pre-Entries to Karen 918-760-3365"},
-"22" : {
+"21" : {
   "title":"Winter 5D Barrel Series",
   "location":"8802 Hwy M",
   "state":"MO",
@@ -309,7 +309,7 @@
   "contactName":"Amye Donaldson",
   "contactNumber":"308-380-2244",
   "description":""},
-"23" : {
+"22" : {
   "title":"Ultimate Texas Barrel Classic",
   "location":"Brackenridge Arena, 284 Brackenridge Pkwy",
   "state":"TX",
@@ -323,7 +323,7 @@
   "contactName":"Melanie Cloward",
   "contactNumber":"817 823-7370",
   "description":"http://wrapn3.com/wp-content/uploads/2016/11/Ultimate-Texas-Barrel-Class-open-entry-form.pdf"},
-"24" : {
+"23" : {
   "title":"Ultimate Texas Barrel Classic",
   "location":"Brackenridge Arena, 284 Brackenridge Pkwy",
   "state":"TX",
@@ -337,7 +337,7 @@
   "contactName":"Melanie Cloward",
   "contactNumber":"817 823-7370",
   "description":"http://wrapn3.com/wp-content/uploads/2016/11/Ultimate-Texas-Barrel-Class-open-entry-form.pdf"},
-"25" : {
+"24" : {
   "title":"Ultimate Texas Barrel Classic",
   "location":"Brackenridge Arena, 284 Brackenridge Pkwy",
   "state":"TX",
@@ -351,7 +351,7 @@
   "contactName":"Melanie Cloward",
   "contactNumber":"817 823-7370",
   "description":"http://wrapn3.com/wp-content/uploads/2016/11/Ultimate-Texas-Barrel-Class-open-entry-form.pdf"},
-"26" : {
+"25" : {
   "title":"TxLaBRA Thursday Nites \"BUILD-A-BONUS",
   "location":"3810 Old Peveto Rd",
   "state":"TX",
@@ -365,7 +365,7 @@
   "contactName":"Debbie McCarey",
   "contactNumber":"409-882-4506",
   "description":"T2 Covered Arena, Orange, TX. BBR APPROVED. $100 ADDED(1-50entries), $125 Added(if 51-70 entries), or $150 Added(if 71&over). 6:00-Exhi($5 or 3/$12). 8:00-Open 4D($25), Exhi Poles, Open 2D Poles($10)(2 second split). FACEBOOK: TxLaBRA. 409-882-4506."},
-"27" : {
+"26" : {
   "title":"Christian Can Chaser 5D BarrelRacing & Open Poles",
   "location":"1893 Hwy 121",
   "state":"LA",
@@ -379,7 +379,7 @@
   "contactName":"t\tDaleigha",
   "contactNumber":"\t3182297783",
   "description":""},
-"28" : {
+"27" : {
   "title":"BRIDLE CREEK OPEN 4D",
   "location":"BRIDLE CREEK ARENA",
   "state":"Sperry",
@@ -393,7 +393,7 @@
   "contactName":"CINDY WOODWORTH",
   "contactNumber":"918-636-6571",
   "description":"The race will be paid out on a 4D format 1/2, 1/2, whole second split. ENTER UNTIL THE LAST HORSE RUNS PRE ENTRIES ARE ACCEPTED BY TEXT ONLY PRE ENTRIES OPEN ON TUESDAY AND CLOSE AT 10 PM THE NIGHT BEFORE THE RACE PRE ENTRY NUMBER 918-636-6571"},
-"29" : {
+"28" : {
   "title":"Friday Night Buckle Series",
   "location":"Rustys Walnut Creek Ranch, 394 Pleasant Chapel Rd.",
   "state":"TX",
@@ -407,7 +407,7 @@
   "contactName":"Brennan Gibbs",
   "contactNumber":"512-227-4240",
   "description":"Winter barrel racing buckle series. 4D, half second splits. 70% payout. Must attend 3 out of 4 to be eligible for buckles. Buckles will be awarded to high point and reserve high point. Points are awarded in each D. Books open at 4:30, exhibitions start at 5:00. Race starts at 7:30. Entries accepted until the last 25 runners. Buybacks allowed. Concessions available, seperate warm up pen. No work points, no awards fee. $20 entry fee, $5 office charge. Exhibitions are $4 each or 3 for $10. Can pre-enter by texting 512-227-4240. When pre-entering, please specify that it is for the Walnut Creek buckle series. Races are on 12/23, 12/30, 1/6, and 1/13."},
-"30" : {
+"29" : {
   "title":"Friday Night Buckle Series",
   "location":"Rustys Walnut Creek Ranch, 394 Pleasant Chapel Rd.",
   "state":"TX",
@@ -421,7 +421,7 @@
   "contactName":"Brennan Gibbs",
   "contactNumber":"512-227-4240",
   "description":"Winter barrel racing buckle series. 4D, half second splits. 70% payout. Must attend 3 out of 4 to be eligible for buckles. Buckles will be awarded to high point and reserve high point. Points are awarded in each D. Books open at 4:30, exhibitions start at 5:00. Race starts at 7:30. Entries accepted until the last 25 runners. Buybacks allowed. Concessions available, seperate warm up pen. No work points, no awards fee. $20 entry fee, $5 office charge. Exhibitions are $4 each or 3 for $10. Can pre-enter by texting 512-227-4240. When pre-entering, please specify that it is for the Walnut Creek buckle series. Races are on 12/23, 12/30, 1/6, and 1/13."},
-"31" : {
+"30" : {
   "title":"$200 Added 4D Winter Jackpot Series",
   "location":"Tri County Arena, 27605 Hwy 365",
   "state":"AR",
@@ -435,7 +435,7 @@
   "contactName":"Marcy Ply",
   "contactNumber":"501-590-6780",
   "description":""},
-"32" : {
+"31" : {
   "title":" WINTER BUCKLE SERIES BARREL RACE",
   "location":"DEWITT ARENA",
   "state":"LA",
@@ -449,7 +449,7 @@
   "contactName":"Susan Hickman",
   "contactNumber":"318-729-4323 ",
   "description":"http://www.rivercitiesbarrelracers.com"},
-"33" : {
+"32" : {
   "title":"Cross Brand Cowboy Church Open & Youth Barrel Race Series",
   "location":"11915 FM 2015",
   "state":"TX",
