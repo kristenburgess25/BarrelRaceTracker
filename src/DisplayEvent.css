@@ -2,8 +2,22 @@ h4 {
   background-color: teal;
   color: white;
   text-align: left;
+  height: 20px;
+  font-size: 12px;
+  padding-left: 8px;
+  padding-top: 3px;
 }
 
 div {
   padding: 20px 0px;
+}
+
+p {
+  font-size: 12px;
+}
+
+.Event {
+  border: 10px;
+  border-color: black;
+  background-color: gray;
 }
