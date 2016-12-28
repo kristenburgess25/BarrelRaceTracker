@@ -19,7 +19,12 @@ const Header = () => {
       </button>
       <button
         className='addEvent-btn'>
-        Add Event
+        <Link
+          to="/addnewevent"
+          className="addevent-btn"
+        >
+          Add New Event
+        </Link>
       </button>
     </div>
   )

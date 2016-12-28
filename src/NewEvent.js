@@ -18,33 +18,31 @@ class NewEvent extends Component {
       payout: '',
       contactName: '',
       contactNumber: '',
-      description: false,
+      description: '',
+      favorite: false,
     }
   }
 
-  pushContact(e) {
+  pushEvent(e) {
     e.preventDefault()
 
     let newContact = {
-      fullName: this.state.fullName,
-      company:  this.state.company,
-      email1:   this.state.email1,
-      email2:   this.state.email2,
-      cell:     this.state.cell,
-      home:     this.state.home,
-      work:     this.state.work,
-      linkedIn: this.state.linkedIn,
-      facebook: this.state.facebook,
-      twitter:  this.state.twitter,
-      github:   this.state.github,
-      notes:    this.state.notes,
-      followUp: this.state.followUp,
-      imgKey:   Date.now()
+      title: this.state.title,
+      date:  this.state.date,
+      location:   this.state.location,
+      city:   this.state.city,
+      state:     this.state.state,
+      sanction:     this.state.sanction,
+      addedmoney:     this.state.addedmoney,
+      time: this.state.time,
+      entryfree: this.state.entryfree,
+      payout:  this.state.payout,
+      contactName:   this.state.contactName,
+      contactNumber:    this.state.contactNumber,
+      description: this.state.description,
     }
-    return(this.props.createContact(
-      newContact,
-      this.state.userImage,
-      newContact.imgKey,
+    return(this.props.createEvent(
+      newContact
     ),
     this.setInitialState()
     )
@@ -52,261 +50,218 @@ class NewEvent extends Component {
 
   setInitialState() {
     this.setState ({
-      fullName: '',
-      company: '',
-      email1: '',
-      email2: '',
-      cell: '',
-      home: '',
-      work: '',
-      linkedIn: '',
-      facebook: '',
-      twitter: '',
-      github: '',
-      notes: '',
-      followUp: false,
-      userImage: '../../images/avatar.png',
-      imgKey: '',
-      file: '',
-      imagePreviewUrl: '../../../images/avatar.png'
+      title: '',
+      date: '',
+      location: '',
+      city: '',
+      state: '',
+      sanction: '',
+      addedmoney: '',
+      time: '',
+      entryfee: '',
+      payout: '',
+      contactName: '',
+      contactNumber: '',
+      description: '',
+      favorite: false,
     })
   }
 
 
   toggleSaveButton () {
-    if(this.state.fullName.length > 1){
+    if(this.state.title.length > 1){
       return false
     }else{
       return true
     }
   }
 
-  handleImageChange(e) {
-    e.preventDefault()
-
-    let reader = new FileReader();
-    let file = e.target.files[0];
-
-    reader.onloadend = () => {
-      this.setState({
-        file: file,
-        imagePreviewUrl: reader.result
-      });
-    }
-    reader.readAsDataURL(file)
-    this.uploadImage(e.target.files)
-  }
-
-  uploadImage(imageUpload) {
-    this.setState({ userImage: imageUpload[0] })
-  }
-
   render() {
+
     return (
-      <section className='contact-form-and-list'>
-        <ImageUpload
-          uploadImage={this.uploadImage.bind(this)}
-          user={this.props.user}
-          handleImageChange={this.handleImageChange.bind(this)}
-          imagePreviewUrl={this.state.imagePreviewUrl}
-        />
+      <section className='new-event'>
+        <form className='new-event-form'
+          aria-label='new event form'>
 
-        <form className='contact-form'
-          aria-label='new contact form'>
-
-          <div className='user-input'>
-            <img className='icon-user'
-              role="none"
-              src='../../../images/avatar.png'/>
+          <div className='title'>
             <input
-            className='input-form-field image'
-              value={this.state.fullName}
-              aria-label="full name"
-              placeholder='full name ...'
+            className='input-form-field'
+              value={this.state.title}
+              aria-label="event title"
+              placeholder='event title ...'
               onChange={(e) => this.setState({
-                  fullName: e.target.value
+                  title: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='company-input'>
-            <img className='icon-company'
-              role="none"
-              src='../../../images/svg/business.svg'/>
+          <div className='date'>
             <input
-              className='input-form-field company'
-              value={this.state.company}
-              aria-label="company name"
-              placeholder='company ...'
+              className='input-form-field date'
+              value={this.state.date}
+              aria-label="event date"
+              placeholder='date ...'
               onChange={(e) => this.setState({
-                  company: e.target.value
+                  date: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='email-input'>
-            <img className='icon-email'
-              role="none" src='../../../images/svg/close-envelope.svg'/>
+          <div className='location'>
             <input
-              className='input-form-field email email1'
-              value={this.state.email1}
-              aria-label="primary email"
-              placeholder='primary email ...'
+              className='input-form-field location'
+              value={this.state.location}
+              aria-label="event location"
+              placeholder='location/venue ...'
               onChange={(e) => this.setState({
-                  email1: e.target.value
+                  location: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='email-input'>
-            <img className='icon-email'
-              role="none" src='../../../images/svg/close-envelope.svg'
-              />
+          <div className='city'>
             <input
-              className='input-form-field email email2'
-              value={this.state.email2}
-              aria-label="secondary email"
-              placeholder='secondary email ...'
+              className='input-form-field city'
+              value={this.state.city}
+              aria-label="event city"
+              placeholder='city ...'
               onChange={(e) => this.setState({
-                  email2: e.target.value
+                  city: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='phone-input'>
-            <img className='icon-phone'
-              role="none" src='../../../images/svg/whatsapp-logo.svg'
-              />
+          <div className='state'>
             <input
-              className='input-form-field cell'
-              value={this.state.cell}
-              aria-label="cell phone number"
-              type='text'
-              placeholder='primary phone ...'
+              className='input-form-field state'
+              value={this.state.state}
+              aria-label="event state"
+              placeholder='state ...'
               onChange={(e) => this.setState({
-                  cell: e.target.value
+                  state: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='phone-input'>
-            <img className='icon-phone'
-              role="none" src='../../../images/svg/whatsapp-logo.svg'/>
+          <div className='sanction'>
             <input
-              className='input-form-field home'
-              value={this.state.home}
-              aria-label="home phone number"
-              placeholder='secondary phone ...'
+              className='input-form-field sanction'
+              value={this.state.sanction}
+              aria-label="sanctioning organizations"
+              placeholder='sanctioning organizations ...'
               onChange={(e) => this.setState({
-                  home: e.target.value
+                  sanction: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='phone-input'>
-            <img className='icon-phone'
-              role="none" src='../../../images/svg/whatsapp-logo.svg'/>
+          <div className='addedmoney'>
             <input
-              className='input-form-field work'
-              value={this.state.work}
-              aria-label="work phone number"
-              placeholder='tertiary phone ...'
+              className='input-form-field addedmoney'
+              value={this.state.addedmoney}
+              aria-label="added money for event"
+              placeholder='added money ...'
               onChange={(e) => this.setState({
-                  work: e.target.value
+                  addedmoney: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='linkedIn-input'>
-            <img className='icon-linkedIn'
-              role="none" src='../../../images/svg/linkedIn.svg'/>
+          <div className='time'>
             <input
-              className='social-media-input-form-field linkedIn'
-              value={this.state.linkedIn}
-              aria-label='linkedIn plus user name'
-              placeholder='linkedIn ...'
+              className='input-form-field time'
+              value={this.state.time}
+              aria-label='time of event'
+              placeholder='event time ...'
               onChange={(e) => this.setState({
-                  linkedIn: e.target.value
+                  time: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='facebook-input'>
-            <img className='icon-facebook'
-              role="none" src='../../../images/svg/facebook-logo.svg'/>
+          <div className='entryfee'>
             <input
-              className='social-media-input-form-field facebook'
-              value={this.state.facebook}
-              aria-label='facebook user name'
-              placeholder='facebook ...'
+              className='input-form-field entryfee'
+              value={this.state.entryfee}
+              aria-label='event entry fee'
+              placeholder='entry fee per horse ...'
               onChange={(e) => this.setState({
-                  facebook: e.target.value
+                  entryfee: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='twitter-input'>
-            <img className='icon-twitter'
-              role="none" src='../../../images/svg/twitter-logo.svg'/>
+          <div className='payout'>
             <input
-              className='social-media-input-form-field twitter'
-              value={this.state.twitter}
-              aria-label='twitter user name'
-              placeholder='twitter ...'
+              className='input-form-field payout'
+              value={this.state.payout}
+              aria-label='payout percentage'
+              placeholder='payout percentage ...'
               onChange={(e) => this.setState({
-                  twitter: e.target.value
+                  payout: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='github-input'>
-            <img className='icon-github'
-              role="none" src='../../../images/svg/github-sign.svg'/>
+          <div className='contactName'>
             <input
-              className='social-media-input-form-field github'
-              value={this.state.github}
-              aria-label='github user name'
-              placeholder='github ...'
+              className='input-form-field contactName'
+              value={this.state.contactName}
+              aria-label='event contact name'
+              placeholder='main contact for event ...'
               onChange={(e) => this.setState({
-                  github: e.target.value
+                  contactName: e.target.value
                 })
               }
             />
           </div>
 
-          <div className='notes-input'>
-            <img className='icon-notes'
-              role="none" src='../../../images/svg/notes.svg'/>
-            <textarea
-              className='notes-text-area'
-              value={this.state.notes}
-              aria-label='notes about contact'
-              placeholder='notes ...'
-              onChange={(e) => this.setState({
-                  notes: e.target.value
-                })
-              }>
-            </textarea>
+          <div className='contactNumber'>
+            <input
+            className='input-form-field contactNumber'
+            value={this.state.contactNumber}
+            aria-label='event contact number'
+            placeholder='main contact number ...'
+            onChange={(e) => this.setState({
+                contactNumber: e.target.value
+              })
+            }
+          />
           </div>
+
+          <div className='description'>
+          <textarea
+            className='description-text-area'
+            value={this.state.description}
+            aria-label='further event description'
+            placeholder='further event description ...'
+            onChange={(e) => this.setState({
+                description: e.target.value
+              })
+            }>
+          </textarea>
+        </div>
 
           <button
             disabled={this.toggleSaveButton()}
-            className='save-contact-button'
+            className='save-event-button'
             onClick={(e) => this.pushContact(e)}
-            >Save Contact
+            >Save Event
           </button>
         </form>
       </section>
       )
     }
   }
+
+  export default NewEvent;

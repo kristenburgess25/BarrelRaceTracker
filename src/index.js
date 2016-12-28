@@ -4,7 +4,8 @@ import { render } from 'react-dom';
 import App from './App';
 import Favorites from './Favorites';
 import Header from './Header';
-import eventList from './App'
+import eventList from './App';
+import NewEvent from './NewEvent';
 
 import './index.css';
 
@@ -22,6 +23,9 @@ const Root = () => {
         component={Favorites}
         eventList={eventList}
       />
+    <Match exactly pattern='/addnewevent'
+      component={NewEvent}
+    />
     </div>
   </BrowserRouter>
 )
