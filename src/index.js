@@ -15,7 +15,9 @@ const Root = () => {
       <Match exactly pattern='/'
         component={App}/>
       <Match exactly pattern='/favorites'
-        component={Favorites}/>
+        component={Favorites}
+        eventList={this}
+      />
     </div>
   </BrowserRouter>
 )

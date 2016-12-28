@@ -8,7 +8,7 @@ class EventList extends Component {
 
     let events = eventList.map(event =>
       <DisplayEvent
-        key={event.key}
+        key={event.akey}
         event={event}
         toggleFavorite={this.props.toggleFavorite}
       />

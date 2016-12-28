@@ -17,7 +17,6 @@ toggleHideDisplay() {
 
 toggleFavorite() {
   const { event }  = this.props;
-  console.log('toggling')
   this.props.toggleFavorite(event.key, event.favorite)
 }
 

@@ -4,11 +4,25 @@ import DisplayEvent from './DisplayEvent'
 class Favorites extends Component {
   render() {
 
+    const { eventList } = this.props;
+
+    let favoritelist = eventList.filter(event =>
+    event.favorite == true)
+
+    let favorites= favoritelist.map(event =>
+      <DisplayEvent
+        key={event.key}
+        event={event}
+        toggleFavorite={this.props.toggleFavorite}
+      />
+
+    )
+
     return (
       <div className="EventList">
         <div>
           <h2>FAVORITES</h2>
-          <p> the best of the best </p>
+          { favorites }
         </div>
       </div>
     );

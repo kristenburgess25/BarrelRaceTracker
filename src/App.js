@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import EventList from './EventList';
 import DisplayEvent from './DisplayEvent'
+import Favorites from './Favorites'
 import { Link } from 'react-router'
 import { pick, map, extend } from 'lodash';
 import firebase, { reference } from './firebase';
@@ -13,6 +14,7 @@ class App extends Component {
     this.state = {
       user: null,
       eventList: [],
+      hideFavorites: true,
     };
   }
 
@@ -30,7 +32,7 @@ toggleFavorite (key, favorite) {
         if(key === event.key) {
           console.log(key);
           console.log(event.key);
-          firebase.database().ref(key).update({
+          firebase.database().ref(`${key}`).update({
             favorite: !event.favorite
           });
           console.log(event.favorite)
@@ -48,10 +50,15 @@ toggleFavorite (key, favorite) {
         <div className="App-header">
           <h2>Barrel Bash</h2>
           <input placeholder='SEARCH'></input>
-          <button className='favorites'>
+          <button
+            className='favorites'
+            onClick={() => {this.setState(
+              {hideFavorites: false})}}
+            >
             <Link
               to="/favorites"
-              className="favorites-btn">
+              className="favorites-btn"
+            >
               Favorites
             </Link>
           </button>
@@ -64,6 +71,11 @@ toggleFavorite (key, favorite) {
           eventList={this.state.eventList}
           toggleFavorite={this.toggleFavorite.bind(this)}
         />
+      <Favorites
+        eventList={this.state.eventList}
+        toggleFavorite={this.toggleFavorite.bind(this)}
+        hidden={this.state.hideFavorites}
+      />
       <footer>
         <p> Sort </p>
         <p> Filter </p>
