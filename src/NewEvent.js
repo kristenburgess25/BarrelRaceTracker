@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import firebase, { reference } from './firebase'
+import firebase, { reference } from './firebase'
 
 
 class NewEvent extends Component {
@@ -23,29 +23,29 @@ class NewEvent extends Component {
     }
   }
 
-  pushEvent(e) {
-    e.preventDefault()
 
-    let newContact = {
+  addNewEvent(e) {
+    e.preventDefault()
+    let newEvent = {
       title: this.state.title,
-      date:  this.state.date,
-      location:   this.state.location,
-      city:   this.state.city,
-      state:     this.state.state,
-      sanction:     this.state.sanction,
-      addedmoney:     this.state.addedmoney,
+      date: this.state.date,
+      location: this.state.location,
+      city: this.state.city,
+      state: this.state.state,
+      sanction: this.state.sanction,
+      addedmoney: this.state.addedmoney,
       time: this.state.time,
       entryfree: this.state.entryfree,
-      payout:  this.state.payout,
-      contactName:   this.state.contactName,
-      contactNumber:    this.state.contactNumber,
+      payout: this.state.payout,
+      contactName: this.state.contactName,
+      contactNumber: this.state.contactNumber,
       description: this.state.description,
     }
-    return(this.props.createEvent(
-      newContact
-    ),
+  reference.push({
+    newEvent
+  })
     this.setInitialState()
-    )
+    
   }
 
   setInitialState() {

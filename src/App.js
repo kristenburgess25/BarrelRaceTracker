@@ -14,6 +14,7 @@ class App extends Component {
       eventList: [],
       hideFavorites: true,
       hideMain: false,
+      searchText: '',
     }
   }
 
@@ -48,6 +49,7 @@ toggleFavorite (key) {
         }
       })
     };
+
 
   render() {
 
