@@ -10,7 +10,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: null,
       eventList: [],
       hideFavorites: true,
       hideMain: false,
@@ -59,9 +58,12 @@ toggleFavorite (key) {
       <div className="App">
         <div className="App-header">
           <h2>Barrel Bash</h2>
-          <input placeholder='SEARCH'></input>
+          <input
+            placeholder='SEARCH'
+            className='search-bar'>
+          </input>
           <button
-            className='favorites'
+            className='favorites-btn'
             onClick={()=> this.showFavorites()}
             >
             FAVORITES

@@ -15,7 +15,7 @@ class EventList extends Component {
     )
 
     return (
-      <div className="EventList">
+      <div className="event-list">
         <div>
           <h2>BARREL RACES</h2>
           { events }

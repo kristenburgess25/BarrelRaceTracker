@@ -18,7 +18,7 @@ class Favorites extends Component {
     )
 
     return (
-      <div className="EventList">
+      <div className="favorites-list">
         <div>
           <h2>FAVORITES</h2>
           { favorites }

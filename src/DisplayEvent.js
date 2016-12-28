@@ -27,7 +27,7 @@ toggleFavorite() {
 
     return (
       <div>
-        <div className="Event">
+        <div className="event-card">
         <section
           >
           <h4> Event </h4>
