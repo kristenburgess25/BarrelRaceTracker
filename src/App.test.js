@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import barrelraces from './BarrelRaces.js';
-// import {shallow, mount, render, map} from 'enzyme';
+import {shallow, mount, render, map} from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+describe('Application | Unit Tests', () => {
+  it('can mount with no properties', () => {
+    const wrapper = shallow(<App />)
+  });
+
+  it('renders a div wrapper', () => {
+    const wrapper = shallow(
+      <App />,
+    );
+    expect(wrapper.find('div')).toBe.true;
+  });
 });
-
-it('pulls in an array of objects', () => {
-  const wrapper = Shallow
-  eventList={barrelraces}
-})
