@@ -11,6 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      user: null,
       eventList: [],
     };
   }
@@ -24,13 +25,17 @@ class App extends Component {
   });
 }
 
-markFavorite () {
+toggleFavorite (key, favorite) {
   this.state.eventList.map(event => {
         if(key === event.key) {
-          firebase.database().ref(`${key}`).update({
+          console.log(key);
+          console.log(event.key);
+          firebase.database().ref(key).update({
             favorite: !event.favorite
-          })
+          });
+          console.log(event.favorite)
         } else {
+          console.log('returned')
           return
         }
       })
@@ -57,6 +62,7 @@ markFavorite () {
         </div>
         <EventList
           eventList={this.state.eventList}
+          toggleFavorite={this.toggleFavorite.bind(this)}
         />
       <footer>
         <p> Sort </p>

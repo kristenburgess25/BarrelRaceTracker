@@ -15,6 +15,12 @@ toggleHideDisplay() {
   })
 }
 
+toggleFavorite() {
+  const { event }  = this.props;
+  console.log('toggling')
+  this.props.toggleFavorite(event.key, event.favorite)
+}
+
 
 
   render() {
@@ -29,9 +35,9 @@ toggleHideDisplay() {
             <p> {event.title} </p>
             <p> {event.date} </p>
             <button
-              onClick={() => this.props.markFavorite(event.key)}
-              >
-              FAVORITE
+              className='savefavorite-btn'
+              onClick={() => {this.toggleFavorite()}}>
+              Favorite
             </button>
           <h4> Location </h4>
             <p> {event.location} </p>
