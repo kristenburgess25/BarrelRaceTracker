@@ -14,8 +14,9 @@ class App extends Component {
     this.state = {
       user: null,
       eventList: [],
-      hideFavorites: false,
-    };
+      hideFavorites: true,
+      hideMain: false,
+    }
   }
 
   componentDidMount() {
@@ -26,6 +27,13 @@ class App extends Component {
     });
   });
 }
+
+  showFavorites() {
+    this.setState({
+      hideFavorites: !this.state.hideFavorites,
+      hideMain: !this.state.hideMain,
+    })
+  }
 
 toggleFavorite (key, favorite) {
   this.state.eventList.map(event => {
@@ -41,7 +49,7 @@ toggleFavorite (key, favorite) {
           return
         }
       })
-    }
+    };
 
   render() {
 
@@ -49,10 +57,33 @@ toggleFavorite (key, favorite) {
 
     return (
       <div className="App">
+        <div className="App-header">
+          <h2>Barrel Bash</h2>
+          <input placeholder='SEARCH'></input>
+          <button
+            className='favorites'
+            onClick={()=> this.showFavorites()}
+            >
+            FAVORITES
+          </button>
+          <button
+            className='addEvent-btn'>
+            <Link
+              to="/addnewevent"
+              className="addevent-btn"
+            >
+              Add New Event
+            </Link>
+          </button>
+        </div>
+
+        <div hidden={this.state.hideMain}>
         <EventList
           eventList={eventList}
           toggleFavorite={this.toggleFavorite.bind(this)}
         />
+        </div>
+
       <div hidden={this.state.hideFavorites}>
       <Favorites
         eventList={eventList}
@@ -66,6 +97,6 @@ toggleFavorite (key, favorite) {
       </div>
     );
   }
-}
+};
 
 export default App;

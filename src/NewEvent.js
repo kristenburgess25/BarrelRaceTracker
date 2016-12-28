@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import firebase, { reference } from '../firebase'
+import firebase, { reference } from './firebase'
 
 
 class NewEvent extends Component {
