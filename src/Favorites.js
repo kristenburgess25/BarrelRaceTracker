@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import DisplayEvent from './DisplayEvent';
 
 class Favorites extends Component {
-  constructor() {
-  super()
-}
   render() {
 
     const { eventList } = this.props;

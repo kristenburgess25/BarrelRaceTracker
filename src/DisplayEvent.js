@@ -29,7 +29,7 @@ toggleFavorite() {
       <div>
         <div className="Event">
         <section
-          onClick={this.toggleHideDisplay.bind(this)}>
+          >
           <h4> Event </h4>
             <p> {event.title} </p>
             <p> {event.date} </p>
@@ -41,6 +41,11 @@ toggleFavorite() {
           <h4> Location </h4>
             <p> {event.location} </p>
             <p> {event.city}, {event.state}</p>
+            <button
+              onClick={this.toggleHideDisplay.bind(this)}
+            >
+            See More Info
+            </button>
           </section>
 
           <section
