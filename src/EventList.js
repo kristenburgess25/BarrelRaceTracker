@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import DisplayEvent from './DisplayEvent'
+import DisplayEvent from './DisplayEvent';
 
 class EventList extends Component {
+  constructor() {
+  super()
+}
   render() {
 
     const { eventList } = this.props;
 
     let events = eventList.map(event =>
       <DisplayEvent
-        key={event.akey}
+        key={event.key}
         event={event}
         toggleFavorite={this.props.toggleFavorite}
       />

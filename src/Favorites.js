@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import DisplayEvent from './DisplayEvent'
+import DisplayEvent from './DisplayEvent';
 
 class Favorites extends Component {
+  constructor() {
+  super()
+}
   render() {
 
     const { eventList } = this.props;
 
     let favoritelist = eventList.filter(event =>
-    event.favorite == true)
+    event.favorite === true)
 
     let favorites= favoritelist.map(event =>
       <DisplayEvent
@@ -15,7 +18,6 @@ class Favorites extends Component {
         event={event}
         toggleFavorite={this.props.toggleFavorite}
       />
-
     )
 
     return (

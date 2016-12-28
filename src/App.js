@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       user: null,
       eventList: [],
-      hideFavorites: true,
+      hideFavorites: false,
     };
   }
 
@@ -45,37 +45,20 @@ toggleFavorite (key, favorite) {
 
   render() {
 
+    const { eventList } = this.state;
+
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Barrel Bash</h2>
-          <input placeholder='SEARCH'></input>
-          <button
-            className='favorites'
-            onClick={() => {this.setState(
-              {hideFavorites: false})}}
-            >
-            <Link
-              to="/favorites"
-              className="favorites-btn"
-            >
-              Favorites
-            </Link>
-          </button>
-          <button
-            className='addEvent-btn'>
-            Add Event
-          </button>
-        </div>
         <EventList
-          eventList={this.state.eventList}
+          eventList={eventList}
           toggleFavorite={this.toggleFavorite.bind(this)}
         />
+      <div hidden={this.state.hideFavorites}>
       <Favorites
-        eventList={this.state.eventList}
+        eventList={eventList}
         toggleFavorite={this.toggleFavorite.bind(this)}
-        hidden={this.state.hideFavorites}
       />
+      </div>
       <footer>
         <p> Sort </p>
         <p> Filter </p>
