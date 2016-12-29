@@ -45,7 +45,7 @@ class NewEvent extends Component {
     newEvent
   })
     this.setInitialState()
-    
+
   }
 
   setInitialState() {
@@ -85,7 +85,7 @@ class NewEvent extends Component {
 
           <div className='title'>
             <input
-            className='input-form-field'
+            className='input-form-field title-input'
               value={this.state.title}
               aria-label="event title"
               placeholder='event title ...'
@@ -98,7 +98,7 @@ class NewEvent extends Component {
 
           <div className='date'>
             <input
-              className='input-form-field date'
+              className='input-form-field date-input'
               value={this.state.date}
               aria-label="event date"
               placeholder='date ...'
@@ -111,7 +111,7 @@ class NewEvent extends Component {
 
           <div className='location'>
             <input
-              className='input-form-field location'
+              className='input-form-field location-input'
               value={this.state.location}
               aria-label="event location"
               placeholder='location/venue ...'
@@ -124,7 +124,7 @@ class NewEvent extends Component {
 
           <div className='city'>
             <input
-              className='input-form-field city'
+              className='input-form-field city-input'
               value={this.state.city}
               aria-label="event city"
               placeholder='city ...'
@@ -137,7 +137,7 @@ class NewEvent extends Component {
 
           <div className='state'>
             <input
-              className='input-form-field state'
+              className='input-form-field state-input'
               value={this.state.state}
               aria-label="event state"
               placeholder='state ...'
@@ -150,7 +150,7 @@ class NewEvent extends Component {
 
           <div className='sanction'>
             <input
-              className='input-form-field sanction'
+              className='input-form-field sanction-input'
               value={this.state.sanction}
               aria-label="sanctioning organizations"
               placeholder='sanctioning organizations ...'
@@ -163,7 +163,7 @@ class NewEvent extends Component {
 
           <div className='addedmoney'>
             <input
-              className='input-form-field addedmoney'
+              className='input-form-field addedmoney-input'
               value={this.state.addedmoney}
               aria-label="added money for event"
               placeholder='added money ...'
@@ -176,7 +176,7 @@ class NewEvent extends Component {
 
           <div className='time'>
             <input
-              className='input-form-field time'
+              className='input-form-field time-input'
               value={this.state.time}
               aria-label='time of event'
               placeholder='event time ...'
@@ -189,7 +189,7 @@ class NewEvent extends Component {
 
           <div className='entryfee'>
             <input
-              className='input-form-field entryfee'
+              className='input-form-field entryfee-input'
               value={this.state.entryfee}
               aria-label='event entry fee'
               placeholder='entry fee per horse ...'
@@ -202,7 +202,7 @@ class NewEvent extends Component {
 
           <div className='payout'>
             <input
-              className='input-form-field payout'
+              className='input-form-field payout-input'
               value={this.state.payout}
               aria-label='payout percentage'
               placeholder='payout percentage ...'
@@ -215,7 +215,7 @@ class NewEvent extends Component {
 
           <div className='contactName'>
             <input
-              className='input-form-field contactName'
+              className='input-form-field contactName-input'
               value={this.state.contactName}
               aria-label='event contact name'
               placeholder='main contact for event ...'
@@ -228,7 +228,7 @@ class NewEvent extends Component {
 
           <div className='contactNumber'>
             <input
-            className='input-form-field contactNumber'
+            className='input-form-field contactNumber-input'
             value={this.state.contactNumber}
             aria-label='event contact number'
             placeholder='main contact number ...'

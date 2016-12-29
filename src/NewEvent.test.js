@@ -66,9 +66,9 @@ describe('NewEvent| Unit Test', () => {
   });
   it('sets initial state of contactName to an empty string', () => {
     const wrapper = shallow(<NewEvent/>)
-    assert.equal(wrapper.state('contactName'), (''))
+    assert.equal(wrapper.state('conctactName'), (''))
   });
-  it('sets initial state of contactNumber to an empty string', () => {
+  it('sets initial state of conctactNumber to an empty string', () => {
     const wrapper = shallow(<NewEvent/>)
     assert.equal(wrapper.state('contactNumber'), (''))
   });
@@ -82,86 +82,86 @@ describe('NewEvent| Unit Test', () => {
   });
 });
 
-// describe('NewEvent| Feature Test', () => {
-//   it('should change the "fullName" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.image')
-//     messageInput.simulate('change', {target: {value: 'First Last Name'} })
-//     assert.equal(wrapper.state('fullName'), ('First Last Name'))
-//
-//   })
-//   it('should change the "company" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.company')
-//     messageInput.simulate('change', {target: {value: 'company name'} })
-//       assert.equal(wrapper.state('company'), ('company name'))
-//   })
-//   it('should change the "email1" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.email1')
-//     messageInput.simulate('change', {target: {value: 'emailaddress1'} })
-//       assert.equal(wrapper.state('email1'), ('emailaddress1'))
-//   })
-//   it('should change the "email2" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.email2')
-//     messageInput.simulate('change', {target: {value: 'emailaddress2'} })
-//     assert.equal(wrapper.state('email2'), ('emailaddress2'))
-//   })
-//   it('should change the "cell" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.cell')
-//     messageInput.simulate('change', {target: {value: '303-349-8791'} })
-//       assert.equal(wrapper.state('cell'), ('303-349-8791'))
-//   })
-//   it('should change the "home" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.home')
-//     messageInput.simulate('change', {target: {value: '303-349-8791'} })
-//       assert.equal(wrapper.state('home'), ('303-349-8791'))
-//   })
-//   it('should change the "work" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.work')
-//     messageInput.simulate('change', {target: {value: '303-349-8791'} })
-//       assert.equal(wrapper.state('work'), ('303-349-8791'))
-//   })
-//   it('should change the "google" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.linkedIn')
-//     messageInput.simulate('change', {target: {value: 'username'} })
-//       assert.equal(wrapper.state('linkedIn'), ('username'))
-//   })
-//   it('should change the "facebook" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.facebook')
-//     messageInput.simulate('change', {target: {value: 'username'} })
-//       assert.equal(wrapper.state('facebook'), ('username'))
-//   })
-//   it('should change the "twitter" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.twitter')
-//     messageInput.simulate('change', {target: {value: 'username'} })
-//       assert.equal(wrapper.state('twitter'), ('username'))
-//       console.log(wrapper.state('twitter'))
-//   })
-//   it('should change the "github" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.github')
-//     messageInput.simulate('change', {target: {value: 'username'} })
-//       assert.equal(wrapper.state('github'), ('username'))
-//   })
-//   it('should change the "notes" state with new contact info', () => {
-//     const wrapper = mount(<NewEvent/>)
-//     const messageInput = wrapper.find('.notes-text-area')
-//     messageInput.simulate('change', {target: {value: 'best friend ever'} })
-//       assert.equal(wrapper.state('notes'), ('best friend ever'))
-//   })
-//   it.skip('can render a new contact when "Save Contact" button is clicked"', () => {
-//     const wrapper = mount(<Application />)
-//     const messageInput = wrapper.find('.image')
-//     messageInput.simulate('change', {target: {value: 'goodmorning'} })
-//     wrapper.find('.save-contact-button').simulate('click')
-//       assert.equal(wrapper.text(), ('goodmorning'))
-//   })
-// })
+describe('NewEvent| Feature Test', () => {
+  it('should change the "title" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.title-input')
+    userInput.simulate('change', {target: {value: 'Best Barrel Race'} })
+    assert.equal(wrapper.state('title'), ('Best Barrel Race'))
+
+  })
+  it('should change the "date" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.date-input')
+    userInput.simulate('change', {target: {value: 'date'} })
+      assert.equal(wrapper.state('date'), ('date'))
+  })
+  it('should change the "location" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.location-input')
+    userInput.simulate('change', {target: {value: 'best location'} })
+      assert.equal(wrapper.state('location'), ('best location'))
+  })
+  it('should change the "city" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.city-input')
+    userInput.simulate('change', {target: {value: 'Denver'} })
+    assert.equal(wrapper.state('city'), ('Denver'))
+  })
+  it('should change the "state" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.state-input')
+    userInput.simulate('change', {target: {value: 'CO'} })
+      assert.equal(wrapper.state('state'), ('CO'))
+  })
+  it('should change the "sanction" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.sanction-input')
+    userInput.simulate('change', {target: {value: 'NBHA'} })
+      assert.equal(wrapper.state('sanction'), ('NBHA'))
+  })
+  it('should change the "addedmoney" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.addedmoney-input')
+    userInput.simulate('change', {target: {value: '1000'} })
+      assert.equal(wrapper.state('addedmoney'), ('1000'))
+  })
+  it('should change the "time" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.time-input')
+    userInput.simulate('change', {target: {value: '1200'} })
+      assert.equal(wrapper.state('time'), ('1200'))
+  })
+  it('should change the "entryfee" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.entryfee-input')
+    userInput.simulate('change', {target: {value: '30'} })
+      assert.equal(wrapper.state('entryfee'), ('30'))
+  })
+  it('should change the "payout" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.payout-input')
+    userInput.simulate('change', {target: {value: '80%'} })
+      assert.equal(wrapper.state('payout'), ('80%'))
+  })
+  it('should change the "contactName" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.contactName-input')
+    userInput.simulate('change', {target: {value: 'Kristen'} })
+      assert.equal(wrapper.state('contactName'), ('Kristen'))
+  })
+  it('should change the "contactNumber" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.contactNumber-input')
+    userInput.simulate('change', {target: {value: '303-349-8791'} })
+      assert.equal(wrapper.state('contactNumber'), ('303-349-8791'))
+  })
+  it('should change the "description" state with new event info', () => {
+    const wrapper = mount(<NewEvent/>)
+    const userInput = wrapper.find('.description-text-area')
+    userInput.simulate('change', {target: {value: 'best event ever'} })
+      assert.equal(wrapper.state('description'), ('best event ever'))
+  })
+  it.skip('can render a new event when "Save Event" button is clicked"', () => {
+  })
+})
