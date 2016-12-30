@@ -23,30 +23,15 @@ class NewEvent extends Component {
     }
   }
 
-
-  addNewEvent(e) {
+  addNewEvent (e) {
     e.preventDefault()
-    let newEvent = {
-      title: this.state.title,
-      date: this.state.date,
-      location: this.state.location,
-      city: this.state.city,
-      state: this.state.state,
-      sanction: this.state.sanction,
-      addedmoney: this.state.addedmoney,
-      time: this.state.time,
-      entryfree: this.state.entryfree,
-      payout: this.state.payout,
-      contactName: this.state.contactName,
-      contactNumber: this.state.contactNumber,
-      description: this.state.description,
-    }
-  reference.push({
-    newEvent
-  })
-    this.setInitialState()
-
+    console.log(reference)
+    let newEvent = this.state
+    reference.push({
+      newEvent
+    })
   }
+
 
   setInitialState() {
     this.setState ({
@@ -255,7 +240,7 @@ class NewEvent extends Component {
           <button
             disabled={this.toggleSaveButton()}
             className='save-event-button'
-            onClick={(e) => this.pushContact(e)}
+            onClick={(e) => this.addNewEvent(e)}
             >Save Event
           </button>
         </form>

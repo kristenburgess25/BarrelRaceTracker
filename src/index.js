@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 import App from './App';
 import Favorites from './Favorites';
@@ -7,7 +8,7 @@ import NewEvent from './NewEvent';
 
 import './index.css';
 
-import { BrowserRouter, Match } from 'react-router'
+import { BrowserRouter, Match, Miss } from 'react-router'
 
 
 const Root = () => {

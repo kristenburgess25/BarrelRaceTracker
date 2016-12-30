@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import EventList from './EventList';
-import Favorites from './Favorites'
+import Favorites from './Favorites';
+import NewEvent from './NewEvent'
 import { Link } from 'react-router'
 import { map, extend } from 'lodash';
 import firebase, { reference } from './firebase';
@@ -13,6 +14,7 @@ class App extends Component {
       eventList: [],
       hideFavorites: true,
       hideMain: false,
+      // hideNew: false,
       searchText: '',
     }
   }
@@ -49,7 +51,6 @@ toggleFavorite (key) {
       })
     };
 
-
   render() {
 
     const { eventList } = this.state;
@@ -69,13 +70,9 @@ toggleFavorite (key) {
             FAVORITES
           </button>
           <button
-            className='addEvent-btn'>
-            <Link
-              to="/addnewevent"
-              className="addevent-btn"
-            >
-              Add New Event
-            </Link>
+            className='addEvent-btn'
+          >
+          <Link to="addnewevent"> ADD NEW EVENT </Link>
           </button>
         </div>
 
@@ -91,6 +88,8 @@ toggleFavorite (key) {
         eventList={eventList}
         toggleFavorite={this.toggleFavorite.bind(this)}
       />
+    <div hidden={this.state.hideNew}>
+    </div>
       </div>
       <footer>
         <p> Sort </p>
