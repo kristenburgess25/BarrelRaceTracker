@@ -30,26 +30,15 @@ class NewEvent extends Component {
     reference.push({
       newEvent
     })
+    this.setInitialState();
   }
 
 
   setInitialState() {
-    this.setState ({
-      title: '',
-      date: '',
-      location: '',
-      city: '',
-      state: '',
-      sanction: '',
-      addedmoney: '',
-      time: '',
-      entryfee: '',
-      payout: '',
-      contactName: '',
-      contactNumber: '',
-      description: '',
-      favorite: false,
-    })
+      let keys = (Object.keys(this.state))
+      keys.forEach((key) => {
+      this.setState({[key]: ''})
+      })
   }
 
 
