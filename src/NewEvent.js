@@ -57,17 +57,15 @@ class NewEvent extends Component {
 
     const { newevent } = this.state
 
-    console.log('input fields', inputFields)
-
 const form = inputFields.map(field =>
   <div className={field}>
     <p>  {field} : </p>
            <input
            className='input-form-field'
-
+            value={this.state[field]}
              placeholder='.....'
              onChange={(e) => this.setState({
-                field : e.target.value
+                [field] : e.target.value
                })
              }
            />
@@ -76,6 +74,12 @@ const form = inputFields.map(field =>
     return (
       <section className='new-event'>
         { form }
+      <button
+        disabled={this.toggleSaveButton()}
+        className='save-event-button'
+        onClick={(e) => this.addNewEvent(e)}
+     >Save Event
+      </button>
       </section>
       )
     }
