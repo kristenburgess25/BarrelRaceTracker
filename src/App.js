@@ -14,7 +14,6 @@ class App extends Component {
       eventList: [],
       hideFavorites: true,
       hideMain: false,
-      // hideNew: false,
       searchText: '',
     }
   }
@@ -35,7 +34,9 @@ class App extends Component {
     })
   }
 
-
+  updateSearch(e) {
+  this.setState({ searchText: e.target.value })
+}
 
 toggleFavorite (key) {
   console.log(this.state.eventList)
@@ -45,7 +46,6 @@ toggleFavorite (key) {
             favorite: !event.favorite,
           })
         } else {
-          console.log('returned')
           return
         }
       })
@@ -61,11 +61,13 @@ toggleFavorite (key) {
           <h2>Barrel Bash</h2>
           <input
             placeholder='SEARCH'
-            className='search-bar'>
+            className='search-bar'
+            onChange={(e)=> this.updateSearch(e)}
+            >
           </input>
           <button
             className='favorites-btn'
-            onClick={()=> this.showFavorites()}
+            onClick={(e)=> this.showFavorites(e)}
             >
             FAVORITES
           </button>
