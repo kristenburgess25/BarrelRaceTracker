@@ -82,6 +82,7 @@ toggleFavorite (key) {
         <EventList
           eventList={eventList}
           toggleFavorite={this.toggleFavorite.bind(this)}
+          searchText={this.state.searchText}
         />
         </div>
 
@@ -89,6 +90,7 @@ toggleFavorite (key) {
       <Favorites
         eventList={eventList}
         toggleFavorite={this.toggleFavorite.bind(this)}
+        searchText={this.state.searchText}
       />
     <div hidden={this.state.hideNew}>
     </div>
