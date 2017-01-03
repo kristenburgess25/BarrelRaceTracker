@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import EventList from './EventList';
 import Favorites from './Favorites';
-import NewEvent from './NewEvent'
 import { Link } from 'react-router'
 import { map, extend } from 'lodash';
 import firebase, { reference } from './firebase';
@@ -39,14 +38,13 @@ class App extends Component {
 }
 
 toggleFavorite (key) {
-  console.log(this.state.eventList)
   this.state.eventList.map(event => {
         if(key === event.key) {
-        firebase.database().ref('barrelraces').child(key).update({
+        return firebase.database().ref('barrelraces').child(key).update({
             favorite: !event.favorite,
           })
         } else {
-          return
+          return false;
         }
       })
     };

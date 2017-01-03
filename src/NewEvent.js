@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import firebase, { reference } from './firebase'
-import NewEventForm from './NewEventForm'
+import { reference } from './firebase'
 
 
 class NewEvent extends Component {
@@ -54,8 +53,6 @@ class NewEvent extends Component {
   render() {
 
     let inputFields = Object.keys(this.state)
-
-    const { newevent } = this.state
 
 const form = inputFields.map(field =>
   <div className={field}>
