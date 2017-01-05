@@ -8,7 +8,6 @@ const Header = () => {
         <h2>Barrel Bash</h2>
         <button
           className='favorites-btn'
-          onClick={(e)=> this.showFavorites(e)}
           >
           FAVORITES
         </button>

@@ -33,13 +33,6 @@ class App extends Component {
   });
 }
 
-  // showFavorites() {
-  //   this.setState({
-  //     hideFavorites: !this.state.hideFavorites,
-  //     hideMain: !this.state.hideMain,
-  //   })
-  // }
-
   updateSearch(e) {
   this.setState({ searchText: e.target.value })
 }
