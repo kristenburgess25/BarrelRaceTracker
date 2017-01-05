@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import EventList from './EventList';
 import Favorites from './Favorites';
+import NewEvent from './NewEvent';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
@@ -32,12 +33,12 @@ class App extends Component {
   });
 }
 
-  showFavorites() {
-    this.setState({
-      hideFavorites: !this.state.hideFavorites,
-      hideMain: !this.state.hideMain,
-    })
-  }
+  // showFavorites() {
+  //   this.setState({
+  //     hideFavorites: !this.state.hideFavorites,
+  //     hideMain: !this.state.hideMain,
+  //   })
+  // }
 
   updateSearch(e) {
   this.setState({ searchText: e.target.value })
@@ -68,7 +69,20 @@ toggleFavorite (key) {
             <EventList
               eventList={eventList}
               searchText={this.state.searchText}
+              toggleFavorite={this.toggleFavorite.bind(this)}
             />
+          )}
+        />
+      <Match exactly pattern="/favorites" render={ () => (
+            <Favorites
+              eventList={eventList}
+              toggleFavorite={this.toggleFavorite.bind(this)}
+              searchText={this.state.searchText}
+            />
+          )}
+        />
+      <Match exactly pattern="/addnewevent" render={ () => (
+            <NewEvent />
           )}
         />
       <Footer />
