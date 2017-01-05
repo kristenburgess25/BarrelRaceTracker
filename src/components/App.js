@@ -75,7 +75,8 @@ toggleFavorite (key) {
           )}
         />
       <Match exactly pattern="/addnewevent" render={ () => (
-            <NewEvent />
+            <NewEvent
+            />
           )}
         />
       <Footer />
@@ -84,8 +85,5 @@ toggleFavorite (key) {
     );
   }
 };
-
-export default App;
-
 
 render(<App />, document.getElementById('root'))
