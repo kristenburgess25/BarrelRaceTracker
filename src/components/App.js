@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import EventList from './EventList';
 import Favorites from './Favorites';
-import { Link } from 'react-router'
+import Header from './Header';
+import SearchBar from './SearchBar';
+import { Link } from 'react-router';
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
 
@@ -56,27 +58,8 @@ toggleFavorite (key) {
 
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Barrel Bash</h2>
-          <input
-            placeholder='SEARCH'
-            className='search-bar'
-            onChange={(e)=> this.updateSearch(e)}
-            >
-          </input>
-          <button
-            className='favorites-btn'
-            onClick={(e)=> this.showFavorites(e)}
-            >
-            FAVORITES
-          </button>
-          <button
-            className='addEvent-btn'
-          >
-          <Link to="addnewevent"> ADD NEW EVENT </Link>
-          </button>
-        </div>
-
+        <Header />
+        <SearchBar />
         <div hidden={this.state.hideMain}>
         <EventList
           eventList={eventList}
