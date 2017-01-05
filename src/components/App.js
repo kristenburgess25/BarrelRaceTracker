@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../styles/App.css';
 import EventList from './EventList';
 import Favorites from './Favorites';
 import { Link } from 'react-router'
 import { map, extend } from 'lodash';
-import firebase, { reference } from './firebase';
+import firebase, { reference } from '../firebase';
 
 
 class App extends Component {
