@@ -60,28 +60,25 @@ toggleFavorite (key) {
     const { eventList } = this.state;
 
     return (
+      <BrowserRouter>
       <div className="App">
         <Header />
         <SearchBar />
-        <div hidden={this.state.hideMain}>
-        <EventList
-          eventList={eventList}
-          toggleFavorite={this.toggleFavorite.bind(this)}
-          searchText={this.state.searchText}
+        <Match exactly pattern="/" render={ () => (
+            <EventList
+              eventList={eventList}
+              searchText={this.state.searchText}
+            />
+          )}
         />
-        </div>
-
-      <div hidden={this.state.hideFavorites}>
-      <Favorites
-        eventList={eventList}
-        toggleFavorite={this.toggleFavorite.bind(this)}
-        searchText={this.state.searchText}
-      />
-      </div>
       <Footer />
       </div>
+      </BrowserRouter>
     );
   }
 };
 
-export default App; 
+export default App;
+
+
+render(<App />, document.getElementById('root'))
