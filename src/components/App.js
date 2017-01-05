@@ -6,7 +6,7 @@ import NewEvent from './NewEvent';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
 import { BrowserRouter, Match } from 'react-router'
