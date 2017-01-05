@@ -8,6 +8,8 @@ import Footer from './Footer';
 import { Link } from 'react-router';
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
+import { BrowserRouter, Match } from 'react-router'
+import { render } from 'react-dom';
 
 
 class App extends Component {
@@ -82,4 +84,4 @@ toggleFavorite (key) {
   }
 };
 
-export default App;
+export default App; 

@@ -1,11 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 import App from './components/App';
 import NewEvent from './components/NewEvent';
 
 import './styles/index.css';
 
-import { BrowserRouter, Match } from 'react-router'
+import { BrowserRouter, Match, Miss } from 'react-router'
 
 
 const Root = () => {
