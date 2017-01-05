@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '..styles/DisplayEvent.css'
+import '../styles/DisplayEvent.css'
 
 class DisplayEvent extends Component {
   constructor() {

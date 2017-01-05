@@ -7,9 +7,14 @@ const Header = () => {
       <div className="App-header">
         <h2>Barrel Bash</h2>
         <button
+          className='home-btn'
+          >
+        <Link to="/"> ALL EVENTS </Link>
+        </button>
+        <button
           className='favorites-btn'
           >
-          FAVORITES
+        <Link to="favorites"> FAVORITES </Link>
         </button>
         <button
           className='addEvent-btn'
@@ -19,6 +24,5 @@ const Header = () => {
       </div>
     )
   }
-
 
 export default Header;
