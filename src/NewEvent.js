@@ -55,10 +55,10 @@ class NewEvent extends Component {
     let inputFields = Object.keys(this.state)
 
 const form = inputFields.map(field =>
-  <div className={field}>
+  <div className='new-input-field'>
     <p>  {field} : </p>
            <input
-           className='input-form-field'
+           className={`${field}-input`}
             value={this.state[field]}
              placeholder='.....'
              onChange={(e) => this.setState({

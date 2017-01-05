@@ -6,6 +6,7 @@ import { Link } from 'react-router'
 import { map, extend } from 'lodash';
 import firebase, { reference } from './firebase';
 
+
 class App extends Component {
   constructor() {
     super();
