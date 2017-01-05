@@ -4,6 +4,7 @@ import EventList from './EventList';
 import Favorites from './Favorites';
 import Header from './Header';
 import SearchBar from './SearchBar';
+import Footer from './Footer';
 import { Link } from 'react-router';
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
@@ -74,13 +75,8 @@ toggleFavorite (key) {
         toggleFavorite={this.toggleFavorite.bind(this)}
         searchText={this.state.searchText}
       />
-    <div hidden={this.state.hideNew}>
-    </div>
       </div>
-      <footer>
-        <p> Sort </p>
-        <p> Filter </p>
-      </footer>
+      <Footer />
       </div>
     );
   }
