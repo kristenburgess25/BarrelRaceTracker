@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import barrelraces from './BarrelRaces.js';
+import App from '../src/App.js';
+import barrelraces from '../src/BarrelRaces.js';
 import {shallow, mount, render, map} from 'enzyme';
 import { assert, expect } from 'chai';
 

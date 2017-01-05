@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import EventList from './EventList'
-import eventList from './BarrelRaces.js';
+import App from '../src/App';
+import EventList from '../src/EventList'
+import eventList from '../src/BarrelRaces.js';
 import {shallow, mount, render, map} from 'enzyme';
 import { assert, expect } from 'chai';
 const sinon = require('sinon')
