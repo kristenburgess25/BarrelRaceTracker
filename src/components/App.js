@@ -18,7 +18,7 @@ class App extends Component {
     super();
     this.state = {
       eventList: [],
-      searchText: '',
+      filteredEvents: null,
     }
   }
 
@@ -29,10 +29,6 @@ class App extends Component {
       eventList: map(barrelraces, (val, key) => extend(val, { key }))
     });
   });
-}
-
-  updateSearch(e) {
-  this.setState({ searchText: e.target.value })
 }
 
 toggleFavorite (key) {
@@ -47,29 +43,33 @@ toggleFavorite (key) {
       })
     };
 
+filteredDisplay(filteredEvents) {
+  this.setState({filteredEvents: filteredEvents});
+}
+
   render() {
 
-    const { eventList } = this.state;
+    const { eventList, filteredEvents } = this.state;
 
     return (
       <BrowserRouter>
       <div className="App">
         <Header />
         <SearchBar
-          updateSearch={this.updateSearch.bind(this)}/>
-        <Match exactly pattern="/" render={ () => (
+          eventList={eventList}
+          filteredDisplay={this.filteredDisplay.bind(this)}
+        />
+        <Match exactly pattern="/" render={()=> (
             <EventList
-              eventList={eventList}
-              searchText={this.state.searchText}
+              eventList={filteredEvents?filteredEvents:eventList}
               toggleFavorite={this.toggleFavorite.bind(this)}
             />
           )}
         />
-      <Match exactly pattern="/favorites" render={ () => (
+      <Match exactly pattern="/favorites" render={()=> (
             <Favorites
-              eventList={eventList}
+              eventList={filteredEvents?filteredEvents:eventList}
               toggleFavorite={this.toggleFavorite.bind(this)}
-              searchText={this.state.searchText}
             />
           )}
         />

@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const SearchBar = ({ updateSearch }) => {
+class SearchBar extends Component {
+  filterEvents(e) {
+    const searchText = e.target.value.toLowerCase();
+    if (searchText.length >= 1) {
+      let filteredEvents = this.props.eventList.filter(event => {
+        return event.title.toLowerCase().includes(searchText);
+      });
+      this.props.filteredDisplay(filteredEvents);
+    } else {
+      this.props.filteredDisplay(null);
+    }
+  }
+
+    render() {
 
     return (
-      <div className="search-bar">
+      <div>
         <input
           className="search-input"
+          value={this.props.searchText}
           placeholder='SEARCH'
-          className='search-bar'
-          onChange={updateSearch}
-          >
-        </input>
+          onChange={(e)=> this.filterEvents(e)}/>
       </div>
     )
   }
+}
+
 
 export default SearchBar;
