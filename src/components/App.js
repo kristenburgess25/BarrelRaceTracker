@@ -18,8 +18,6 @@ class App extends Component {
     super();
     this.state = {
       eventList: [],
-      hideFavorites: true,
-      hideMain: false,
       searchText: '',
     }
   }
@@ -57,7 +55,8 @@ toggleFavorite (key) {
       <BrowserRouter>
       <div className="App">
         <Header />
-        <SearchBar />
+        <SearchBar
+          updateSearch={this.updateSearch.bind(this)}/>
         <Match exactly pattern="/" render={ () => (
             <EventList
               eventList={eventList}

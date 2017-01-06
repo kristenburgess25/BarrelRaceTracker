@@ -1,13 +1,14 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ updateSearch }) => {
 
     return (
-      <div className="search-bar-container">
+      <div className="search-bar">
         <input
+          className="search-input"
           placeholder='SEARCH'
           className='search-bar'
-          onChange={(e)=> this.updateSearch(e)}
+          onChange={updateSearch}
           >
         </input>
       </div>

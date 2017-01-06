@@ -157,7 +157,7 @@ describe('NewEvent| Feature Test', () => {
   })
   it('should change the "description" state with new event info', () => {
     const wrapper = mount(<NewEvent/>)
-    const userInput = wrapper.find('.description-text-area')
+    const userInput = wrapper.find('.description-input')
     userInput.simulate('change', {target: {value: 'best event ever'} })
       assert.equal(wrapper.state('description'), ('best event ever'))
   })
