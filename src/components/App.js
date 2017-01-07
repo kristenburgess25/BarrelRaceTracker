@@ -74,15 +74,13 @@ filteredDisplay(filteredEvents) {
             />
           )}
         />
-      <Match exactly pattern="/addnewevent" render={ () => (
-            <NewEvent
-            />
-          )}
-        />
+      <Match exactly pattern="/addnewevent" render={ () => ( <NewEvent/>)}/>
       <Match exactly pattern="/sort" render={ () => (
-          <Sort />
+          <Sort
+            eventList={eventList}
+          />
         )}
-        />
+      />
       <Footer />
       </div>
       </BrowserRouter>
