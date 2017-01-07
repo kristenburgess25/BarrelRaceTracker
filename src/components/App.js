@@ -6,6 +6,7 @@ import NewEvent from './NewEvent';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
+import Sort from './Sort';
 // import { Link } from 'react-router';
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
@@ -65,7 +66,7 @@ filteredDisplay(filteredEvents) {
               toggleFavorite={this.toggleFavorite.bind(this)}
             />
           )}
-        />
+          />
       <Match exactly pattern="/favorites" render={()=> (
             <Favorites
               eventList={filteredEvents?filteredEvents:eventList}
@@ -77,6 +78,10 @@ filteredDisplay(filteredEvents) {
             <NewEvent
             />
           )}
+        />
+      <Match exactly pattern="/sort" render={ () => (
+          <Sort />
+        )}
         />
       <Footer />
       </div>
