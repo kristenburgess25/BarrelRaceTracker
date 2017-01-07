@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-class Sort extends Component {
+class Filter extends Component {
+
+  sort
 
 render () {
 
@@ -16,6 +18,10 @@ render () {
     <p> From Date : </p>
     <input
     type='date'
+    />
+    <p> Added Money : </p>
+    <input
+    type='value'
     />
     <p> State : </p>
     <select className='state-dropdown'>
@@ -76,4 +82,4 @@ render () {
   }
 }
 
-export default Sort
+export default Filter

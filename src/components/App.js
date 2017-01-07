@@ -7,7 +7,7 @@ import Header from './Header';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
 import Sort from './Sort';
-// import { Link } from 'react-router';
+import Filter from './Filter';
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
 import { BrowserRouter, Match } from 'react-router'
@@ -19,6 +19,7 @@ class App extends Component {
     super();
     this.state = {
       eventList: [],
+      favoritesList: [],
       filteredEvents: null,
     }
   }
@@ -81,6 +82,10 @@ filteredDisplay(filteredEvents) {
           />
         )}
       />
+    <Match exactly pattern='/filter' render={ () => (
+        <Filter eventList={eventList} />
+      )}
+    />
       <Footer />
       </div>
       </BrowserRouter>

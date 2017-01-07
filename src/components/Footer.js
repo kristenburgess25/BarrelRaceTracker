@@ -11,8 +11,11 @@ const Footer = () => {
           SORT
         </Link>
        </button>
-      <button> 
-        Filter </button>
+       <button className='filter-btn'>
+         <Link to='/filter'>
+           FILTER
+         </Link>
+        </button>
     </footer>
     </div>
   )
