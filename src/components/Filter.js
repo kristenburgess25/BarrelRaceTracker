@@ -4,41 +4,82 @@ class Filter extends Component {
   constructor() {
     super();
     this.state = {
-      sanction: '',
+      sanctions: [],
       state: '',
       addedMoney: '',
       date: '',
     }
   }
 
-  filterByState(e){
-    this.setState({state: e.target.value})
+  setSanctions(e) {
+    const sanctions= this.state.sanctions
+    const checkedS = e.target.value
+    if(!sanctions.length){
+      sanctions.push(checkedS)
+    } else if(sanctions.length){
+    for(var i=0; i<sanctions.length; i++) {
+      if(sanctions[i] === checkedS ) {
+        return
+      } else {
+       sanctions.push(checkedS)
+      }
+    }
   }
+}
 
 render () {
 
   return (
     <div>
     <p> Sanction : </p>
+    <form>
     <div className='sanction-box'>
-    <input className='radio' type='checkbox' value='NBHA'/> NBHA
+    <input
+      className='sanction-check'
+      type='checkbox'
+      value='NBHA'
+      onChange={(e) => this.setSanctions(e)}
+    />
+    NBHA
     </div>
+
     <div className='sanction-box'>
-    <input className='radio' type='checkbox' value='NE-4D'/> NE4D
+    <input
+      className='sanction-check'
+      type='checkbox'
+      value='NE-4D'
+      onChange={(e) => this.setSanctions(e)}
+    />
+    NE4D
     </div>
+
+    <div className='sanction-box'>
+    <input className='sanction-check'
+      type='checkbox'
+      value='BBR'
+      onChange={(e) => this.setSanctions(e)}
+    />
+    BBR
+    </div>
+    </form>
+
     <p> From Date : </p>
     <input
     type='date'
+    value={this.state.date}
+    onChange={(e) => this.setState({date: e.target.value})}
     />
     <p> Added Money : </p>
     <input
     type='value'
+    value={this.state.addedMoney}
+    onChange={(e)=> this.setState({addedMoney: e.target.value})}
     />
     <p> State : </p>
     <select
       className='state-dropdown'
       value={this.state.state}
-      onChange={(e)=> this.filterByState(e)}
+      onChange={(e)=> this.setState({state: e.target.value})}
     >
   	<option value="AL">Alabama</option>
   	<option value="AK">Alaska</option>
