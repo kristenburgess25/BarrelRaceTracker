@@ -49,6 +49,10 @@ filteredDisplay(filteredEvents) {
   this.setState({filteredEvents: filteredEvents});
 }
 
+setFilters(filters){
+  console.log(filters)
+}
+
   render() {
 
     const { eventList, filteredEvents } = this.state;
@@ -83,7 +87,10 @@ filteredDisplay(filteredEvents) {
         )}
       />
     <Match exactly pattern='/filter' render={ () => (
-        <Filter eventList={eventList} />
+        <Filter
+          eventList={eventList}
+          setFilters={this.setFilters.bind(this)}
+        />
       )}
     />
       <Footer />

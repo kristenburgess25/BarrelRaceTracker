@@ -11,6 +11,10 @@ class Filter extends Component {
     }
   }
 
+filterByDate(e) {
+  this.setState({date: e.target.value})
+}
+
   setSanctions(e) {
     const sanctions= this.state.sanctions
     const checkedS = e.target.value
@@ -25,7 +29,15 @@ class Filter extends Component {
       }
     }
   }
+  this.setFilters();
 }
+
+setFilters(){
+  const filters= this.state
+  this.props.setFilters(filters)
+}
+
+
 
 render () {
 
@@ -67,7 +79,7 @@ render () {
     <input
     type='date'
     value={this.state.date}
-    onChange={(e) => this.setState({date: e.target.value})}
+    onChange={(e) => this.filterByDate(e)}
     />
     <p> Added Money : </p>
     <input
