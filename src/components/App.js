@@ -61,6 +61,10 @@ setFilters(filters){
       <BrowserRouter>
       <div className="App">
         <Header />
+        <Filter
+          eventList={eventList}
+          setFilters={this.setFilters.bind(this)}
+        />
         <SearchBar
           eventList={eventList}
           filteredDisplay={this.filteredDisplay.bind(this)}
@@ -86,13 +90,6 @@ setFilters(filters){
           />
         )}
       />
-    <Match exactly pattern='/filter' render={ () => (
-        <Filter
-          eventList={eventList}
-          setFilters={this.setFilters.bind(this)}
-        />
-      )}
-    />
       <Footer />
       </div>
       </BrowserRouter>

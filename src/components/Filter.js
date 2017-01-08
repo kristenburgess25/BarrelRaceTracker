@@ -13,6 +13,10 @@ class Filter extends Component {
 
 filterByDate(e) {
   this.setState({date: e.target.value})
+  let filteredEvents = this.props.eventList.filter(event => {
+    return event.date == this.state.date;
+  })
+  console.log(filteredEvents)
 }
 
   setSanctions(e) {
