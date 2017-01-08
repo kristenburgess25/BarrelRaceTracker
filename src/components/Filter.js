@@ -6,7 +6,7 @@ class Filter extends Component {
     this.state = {
       sanctions: [],
       state: '',
-      addedMoney: '',
+      addedmoney: '',
       date: '',
     }
   }
@@ -14,9 +14,8 @@ class Filter extends Component {
 filterByDate(e) {
   this.setState({date: e.target.value})
   let filteredEvents = this.props.eventList.filter(event => {
-    return event.date == this.state.date;
+    console.log(event.date, e.target.value)
   })
-  console.log(filteredEvents)
 }
 
 filterByState(e) {
@@ -30,6 +29,20 @@ filterByState(e) {
   this.props.filteredDisplay(null);
   }
 }
+
+filterByMoney(e) {
+  this.setState({addedmoney: e.target.value})
+  if (this.state.addedmoney){
+  let filteredEvents = this.props.eventList.filter(event => {
+    return event.addedmoney >= e.target.value
+  })
+  console.log(filteredEvents)
+  this.props.filteredDisplay(filteredEvents);
+  } else {
+    this.props.filteredDisplay(null)
+  }
+}
+
 
   setSanctions(e) {
     const sanctions= this.state.sanctions
@@ -97,11 +110,11 @@ render () {
     value={this.state.date}
     onChange={(e) => this.filterByDate(e)}
     />
-    <p> Added Money : </p>
-    <input
+  <p> Added Money Greater Than </p>
+    $ <input
     type='value'
     value={this.state.addedMoney}
-    onChange={(e)=> this.setState({addedMoney: e.target.value})}
+    onChange={(e)=> this.filterByMoney(e)}
     />
     <p> State : </p>
     <select
