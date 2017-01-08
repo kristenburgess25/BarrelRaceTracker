@@ -19,6 +19,18 @@ filterByDate(e) {
   console.log(filteredEvents)
 }
 
+filterByState(e) {
+  this.setState({state: e.target.value})
+  if (this.state.state) {
+  let filteredEvents = this.props.eventList.filter(event => {
+    return event.state.toUpperCase().match(e.target.value)
+  })
+  this.props.filteredDisplay(filteredEvents);
+} else {
+  this.props.filteredDisplay(null);
+  }
+}
+
   setSanctions(e) {
     const sanctions= this.state.sanctions
     const checkedS = e.target.value
@@ -95,7 +107,7 @@ render () {
     <select
       className='state-dropdown'
       value={this.state.state}
-      onChange={(e)=> this.setState({state: e.target.value})}
+      onChange={(e)=> this.filterByState(e)}
     >
   	<option value="AL">Alabama</option>
   	<option value="AK">Alaska</option>

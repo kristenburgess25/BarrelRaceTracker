@@ -64,6 +64,7 @@ setFilters(filters){
         <Filter
           eventList={eventList}
           setFilters={this.setFilters.bind(this)}
+          filteredDisplay={this.filteredDisplay.bind(this)}
         />
         <SearchBar
           eventList={eventList}
