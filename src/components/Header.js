@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-const Header = () => {
+class Header extends Component {
+
+render() {
 
     return (
       <div className="App-header">
@@ -21,8 +23,18 @@ const Header = () => {
         >
         <Link to="addnewevent"> ADD NEW EVENT </Link>
         </button>
+        <button className='sort-btn'>
+          <Link to='/sort'>
+            SORT
+          </Link>
+        </button>
+        <button
+          onClick={(e) => this.props.showFilter(e)}>
+           FILTER
+        </button>
       </div>
     )
   }
+}
 
 export default Header;

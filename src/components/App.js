@@ -21,6 +21,7 @@ class App extends Component {
       eventList: [],
       favoritesList: [],
       filteredEvents: null,
+      hideFilter: true,
     }
   }
 
@@ -53,6 +54,10 @@ setFilters(filters){
   console.log(filters)
 }
 
+showFilter(e) {
+  this.setState({hideFilter: !this.state.hideFilter})
+}
+
   render() {
 
     const { eventList, filteredEvents } = this.state;
@@ -60,12 +65,16 @@ setFilters(filters){
     return (
       <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header
+          showFilter={this.showFilter.bind(this)}
+          />
+      <div hidden={this.state.hideFilter}>
         <Filter
           eventList={eventList}
           setFilters={this.setFilters.bind(this)}
           filteredDisplay={this.filteredDisplay.bind(this)}
         />
+      </div>
         <SearchBar
           eventList={eventList}
           filteredDisplay={this.filteredDisplay.bind(this)}
