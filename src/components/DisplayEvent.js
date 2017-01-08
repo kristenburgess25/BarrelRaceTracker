@@ -32,7 +32,7 @@ toggleFavorite() {
           >
           <h4> Event </h4>
             <p> {event.title} </p>
-            <p> {event.date} </p>
+            <p className='event-date'> {event.date} </p>
             <button
               className='savefavorite-btn'
               onClick={() => {this.toggleFavorite()}}>

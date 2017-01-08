@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DisplayEvent from './DisplayEvent';
+import '../styles/EventList.css'
 
 class EventList extends Component {
 
@@ -18,7 +19,7 @@ class EventList extends Component {
     return (
       <div className="event-list">
         <div>
-          <h2>BARREL RACES</h2>
+          <h3 className='eventlistheader'>All Events</h3>
           { events }
         </div>
       </div>

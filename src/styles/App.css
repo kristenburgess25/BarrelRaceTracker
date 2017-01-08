@@ -26,6 +26,13 @@ button {
   margin: 10px;
   display: block;
   text-align: center;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .sanction-box {
@@ -33,8 +40,35 @@ button {
   padding: 2px;
 }
 
+button {
+  margin: 0 20px;
+  padding: 5px 13px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 3px;
+  background-color: gray;
+  outline: 0; }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+button:hover {
+    cursor: pointer;
+    background-color: maroon;
+  }
+
+input {
+font-size: 14px;
+width: 300px;
+margin: 0;
+padding: 5px 13px;
+border: solid 1px #212121;
+border-radius: 3px;
+  }
+
+.searchbar{
+padding: 5px 0px;
+}
+
+h2 {
+  font-size: 35px;
+  letter-spacing: 3px;
 }

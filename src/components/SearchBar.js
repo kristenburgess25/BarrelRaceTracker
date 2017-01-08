@@ -17,7 +17,7 @@ class SearchBar extends Component {
     render() {
 
     return (
-      <div>
+      <div className='searchbar'>
         <input
           className="search-input"
           value={this.props.searchText}

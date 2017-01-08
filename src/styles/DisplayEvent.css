@@ -1,23 +1,31 @@
 h4 {
   background-color: teal;
   color: white;
-  text-align: left;
+  text-align: center;;
   height: 20px;
   font-size: 12px;
   padding-left: 8px;
   padding-top: 3px;
 }
 
-div {
-  padding: 20px 0px;
+.event-card {
+  padding: 5% 20%;
 }
 
 p {
   font-size: 12px;
+  text-align: center;
 }
 
 .Event {
-  border: 10px;
   border-color: black;
   background-color: gray;
+}
+
+.savefavorite-btn:hover {
+  background-color: orange;
+}
+
+.event-date {
+  
 }

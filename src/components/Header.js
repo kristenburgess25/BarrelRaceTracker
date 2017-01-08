@@ -7,26 +7,27 @@ render() {
 
     return (
       <div className="App-header">
-        <h2>Barrel Bash</h2>
+        <h2>Barrel Race Tracker</h2>
         <button
           className='home-btn'
           >
-        <Link to="/"> ALL EVENTS </Link>
+        <Link to="/"
+          className='link'>
+          ALL EVENTS
+         </Link>
         </button>
         <button
           className='favorites-btn'
           >
-        <Link to="favorites"> FAVORITES </Link>
+        <Link to="favorites"
+          className='link'
+          > FAVORITES </Link>
         </button>
         <button
           className='addEvent-btn'
         >
-        <Link to="addnewevent"> ADD NEW EVENT </Link>
-        </button>
-        <button className='sort-btn'>
-          <Link to='/sort'>
-            SORT
-          </Link>
+        <Link to="addnewevent"
+          className='link'> ADD NEW EVENT </Link>
         </button>
         <button
           onClick={(e) => this.props.showFilter(e)}>
