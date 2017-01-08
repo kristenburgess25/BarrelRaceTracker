@@ -22,14 +22,6 @@
   color: yellow;
 }
 
-button {
-  margin: 10px;
-  display: block;
-  text-align: center;
-  font-style: italic;
-  text-decoration: none;
-}
-
 .link {
   text-decoration: none;
   letter-spacing: 2px;
@@ -39,21 +31,6 @@ button {
   display: block;
   padding: 2px;
 }
-
-button {
-  margin: 0 20px;
-  padding: 5px 13px;
-  border: none;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 3px;
-  background-color: gray;
-  outline: 0; }
-
-button:hover {
-    cursor: pointer;
-    background-color: maroon;
-  }
 
 input {
 font-size: 14px;

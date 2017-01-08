@@ -9,23 +9,52 @@ h4 {
 }
 
 .event-card {
-  padding: 5% 20%;
+  height: 20%;
+  width: 80%;
+  margin: auto;
+  border-color: black;
+  border-width: 5px;
+  background-color: white;
+  display: block;
+  text-align: center;
+
+}
+
+.showmore-btn {
+  display: block;
+  margin: auto;
 }
 
 p {
   font-size: 12px;
   text-align: center;
+  display: inline-block;
 }
 
-.Event {
-  border-color: black;
+
+
+.date {
+  float: left;
+  margin: auto;
+}
+
+.event-month {
+  font-size: 20px;
+  margin: auto;
+}
+
+.event-day {
+  font-size: 16px;
+
+}
+
+.favorite-btn {
+  font-size: 15px;
+  text-align: center;
+  float: right;
   background-color: gray;
 }
 
-.savefavorite-btn:hover {
-  background-color: orange;
-}
-
-.event-date {
-  
+.favorite-btn:hover {
+  background-color: yellow;
 }

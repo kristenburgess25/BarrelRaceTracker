@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/DisplayEvent.css'
+import moment from 'moment';
 
 class DisplayEvent extends Component {
   constructor() {
@@ -24,31 +25,32 @@ toggleFavorite() {
 
   render() {
     const { event }  = this.props;
+    const month = moment(event.date).format('MMM')
+    const day = event.date.split('-')[2]
 
     return (
-      <div>
-        <div className="event-card">
-        <section
+        <section className="event-card">
+        <div
           >
-          <h4> Event </h4>
-            <p> {event.title} </p>
-            <p className='event-date'> {event.date} </p>
-            <button
-              className='savefavorite-btn'
-              onClick={() => {this.toggleFavorite()}}>
-              Favorite
-            </button>
-          <h4> Location </h4>
+          <h4> {event.title}</h4>
+            <p className='date event-month'> {month} </p>
+            <br></br>
+            <p className='date event-day'> {day} </p>
             <p> {event.location} </p>
             <p> {event.city}, {event.state}</p>
-            <button
+              <button
+                className='favorite-btn'
+                onClick={() => {this.toggleFavorite()}}>
+                ☆
+              </button>
+            <button className='showmore-btn'
               onClick={this.toggleHideDisplay.bind(this)}
             >
             See More Info
             </button>
-          </section>
+          </div>
 
-          <section
+          <div
             hidden={this.state.hideDisplay}
             className='hiddeninfo'
           >
@@ -67,9 +69,8 @@ toggleFavorite() {
 
           <h4> Description </h4>
           <p> {event.description}</p>
-      </section>
       </div>
-      </div>
+    </section>
     );
   }
 }
