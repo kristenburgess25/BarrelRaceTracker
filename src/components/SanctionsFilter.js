@@ -18,14 +18,16 @@ class SanctionsFilter extends Component {
 checkSanctions(e) {
   var sanction = e.target.value;
   var sanctions = this.state.sanctions;
+
   this.setState({[sanction]:!this.state[sanction]});
   this.props.setSanctions(sanction)
-  
+  this.setSanctions(sanction)
 }
 
 setSanctions(sanction){
   debugger;
-  if(this.state[sanction]===true){
+  console.log(this.state[sanction]);
+  if(!this.state[sanction]){
     this.state.sanctions.push(sanction)
   }
 }
