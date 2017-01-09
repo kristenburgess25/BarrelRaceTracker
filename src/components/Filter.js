@@ -12,15 +12,19 @@ class Filter extends Component {
   }
 
 filterByDate(e) {
-  this.setState({date: e.target.value})
+  debugger;
+  if (e.target.value) {
   let filteredEvents = this.props.eventList.filter(event => {
-    const formattedDates = event.date.split('-').join('');
-    const selectedDate = this.state.date.split('-').join('')
+    const formattedDates = Date.parse(event.date);
+    const selectedDate = Date.parse(e.target.value);
     if(formattedDates >= selectedDate ) {
-      return console.log(event)
+      return event
     }
-    else return
   })
+  this.props.filteredDisplay(filteredEvents);
+} else {
+  this.props.filteredDisplay(null);
+  }
 }
 
 filterByState(e) {
