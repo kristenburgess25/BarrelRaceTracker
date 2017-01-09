@@ -27,29 +27,34 @@ toggleFavorite() {
   render() {
     const { event }  = this.props;
     const month = moment(event.date).format('MMM')
+    const weekday = moment(event.date).format('dddd')
     const day = event.date.split('-')[2]
     const time = moment(event.time).format('h:mm a')
     const sanctions = event.sanction
 
     return (
         <section className="event-card">
-        <div className='main-card container'
-          onClick={this.toggleHideDisplay.bind(this)}
-          >
+        <div className='main-card container'>
             <p className='sanctions'> {sanctions}</p>
-            <h5>{event.title}</h5>
+            <h5
+              onClick={this.toggleHideDisplay.bind(this)}
+              >{event.title}
+            </h5>
             <div className='container'>
-            <p className='date event-month'> {month} </p>
-            <br></br>
-            <p className='date event-day'> {day} </p>
+              <time className="icon">
+                <em>{weekday}</em>
+                <strong>{month}</strong>
+                <span>{day}</span>
+                </time>
             </div>
-            <p className='location'> {event.city}, {event.state}</p>
-            <br></br>
             <button
               className='mark-favorite container'
               onClick={() => {this.toggleFavorite()}}>
                 ♡
               </button>
+            <br></br>
+            <p className='location'> {event.city}, {event.state}</p>
+
           </div>
 
           <section

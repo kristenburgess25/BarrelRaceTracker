@@ -20,8 +20,6 @@ class EventList extends Component {
       />
     )
 
-  console.log(sortedEvents)
-
     return (
       <div className="event-list">
         <div>
