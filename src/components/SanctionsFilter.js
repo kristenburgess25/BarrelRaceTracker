@@ -6,23 +6,37 @@ class SanctionsFilter extends Component {
     super();
     this.state = {
       sanctions: [],
+      NBHA: false,
+      NE4D: false,
+      BBR: false,
+      BRF: false,
+      Open: false,
+      WPRA: false,
     }
   }
 
 setSanctions(e) {
-  const sanctions= this.state.sanctions;
-  const checkedSanction = e.target.value
-  if(sanctions.length === 0) {
-    sanctions.push(checkedSanction)
-  } else if(sanctions.length > 0) {
-    for(var i=0; i<sanctions.length; i++) {
-      if(checkedSanction !== sanctions[i]) {
-       sanctions.push(checkedSanction)
-      }
-    }
-  }
-  this.props.setSanctions(sanctions)
+  let sanction = e.target.value;
+  this.setState({[sanction]:!this.state[sanction]});
 }
+
+// setSanctions(e) {
+//   const sanctions= this.state.sanctions;
+//   const checkedSanction = e.target.value
+//   debugger;
+//   if(sanctions.length === 0) {
+//     sanctions.push(checkedSanction)
+//   } else if(sanctions.length > 0) {
+//     for(var i=0; i<sanctions.length; i++) {
+//       if(checkedSanction == sanctions[i]){
+//         sanctions.slice([i])
+//      } else if(checkedSanction !== sanctions[i]) {
+//       sanctions.push(checkedSanction)
+//       }
+//     }
+//   }
+//   console.log(sanctions)
+// }
 
 render() {
 
@@ -34,6 +48,7 @@ render() {
     <input
       className='sanction-check'
       type='checkbox'
+      checked={this.state.NBHA}
       value='NBHA'
       onChange={(e) => this.setSanctions(e)}
     />
@@ -44,7 +59,8 @@ render() {
     <input
       className='sanction-check'
       type='checkbox'
-      value='NE-4D'
+      checked={this.state.NE4D}
+      value='NE4D'
       onChange={(e) => this.setSanctions(e)}
     />
     NE4D
@@ -53,7 +69,8 @@ render() {
     <div className='sanction-box'>
     <input className='sanction-check'
       type='checkbox'
-      value='Better Barrel Races'
+      checked={this.state.BBR}
+      value='BBR'
       onChange={(e) => this.setSanctions(e)}
     />
     BBR
@@ -62,6 +79,7 @@ render() {
     <input
       className='sanction-check'
       type='checkbox'
+      checked={this.state.BRF}
       value='BBR'
       onChange={(e) => this.setSanctions(e)}
     />
@@ -71,6 +89,7 @@ render() {
     <input
       className='sanction-check'
       type='checkbox'
+      checked={this.state.Open}
       value='Open'
       onChange={(e) => this.setSanctions(e)}
     />
@@ -80,6 +99,7 @@ render() {
     <input
       className='sanction-check'
       type='checkbox'
+      checked={this.state.WPRA}
       value='WPRA'
       onChange={(e) => this.setSanctions(e)}
     />
