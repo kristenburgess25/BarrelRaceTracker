@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Filter.css'
-import LocationDropdown from './LocationDropdown'
+import LocationFilter from './LocationFilter'
 
 class Filter extends Component {
   constructor() {
@@ -130,7 +130,7 @@ render () {
     onChange={(e)=> this.filterByMoney(e)}
     />
   <br></br>
-  <LocationDropdown
+  <LocationFilter
     filterByState={this.filterByState.bind(this)}
     eventlist={eventList}
   />

@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Filter.css'
 
-class LocationDropdown extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      selectedState: '',
-    }
-  }
+class LocationFilter extends Component {
 
   filterByState(e) {
     debugger;
@@ -28,7 +21,6 @@ class LocationDropdown extends Component {
         <select
           className='state-dropdown filter-location'
           onChange={(e)=> this.filterByState(e)}
-          value={this.state.selectedState}
         >
       	<option value="AL">Alabama</option>
       	<option value="AK">Alaska</option>
@@ -87,4 +79,4 @@ class LocationDropdown extends Component {
   }
 }
 
-export default LocationDropdown
+export default LocationFilter
