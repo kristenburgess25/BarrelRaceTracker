@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DisplayEvent from './DisplayEvent';
+import '../styles/Favorites.css'
 
 class Favorites extends Component {
   render() {
@@ -20,7 +21,7 @@ class Favorites extends Component {
     return (
       <div className="favorites-list">
         <div>
-          <h2>FAVORITES</h2>
+          <h2>Favorites</h2>
           { favorites }
         </div>
       </div>

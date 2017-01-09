@@ -1,8 +1,12 @@
 
 .searchbar{
-padding: 5px 0px;
+margin: 10px auto;
 text-align: center;
 display: block;
+}
+
+.search-input{
+  width: 75%;
 }
 
 .App {

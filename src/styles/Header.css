@@ -18,8 +18,7 @@ button:hover {
 
 .App-header {
     background: url('../images/barrelbanner.jpg') center;
-    display: fill;
-    height: 200px;
+    height: inherit;
   }
 
 .link {
