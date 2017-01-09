@@ -26,10 +26,7 @@ class NewEvent extends Component {
   addNewEvent (e) {
     e.preventDefault()
     console.log(reference)
-    let newEvent = this.state
-    reference.push({
-      newEvent
-    })
+    reference.push(this.state)
     this.setInitialState();
   }
 
