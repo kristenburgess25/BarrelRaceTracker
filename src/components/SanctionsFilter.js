@@ -15,13 +15,18 @@ class SanctionsFilter extends Component {
     }
   }
 
-setSanctions(e) {
-  let sanction = e.target.value;
-  let sanctions = this.state.sanctions;
+checkSanctions(e) {
+  var sanction = e.target.value;
+  var sanctions = this.state.sanctions;
   this.setState({[sanction]:!this.state[sanction]});
+  this.props.setSanctions(sanction)
+  
+}
+
+setSanctions(sanction){
+  debugger;
   if(this.state[sanction]===true){
-    debugger;
-    sanctions.push(sanction)
+    this.state.sanctions.push(sanction)
   }
 }
 
@@ -55,7 +60,7 @@ render() {
       type='checkbox'
       checked={this.state.NBHA}
       value='NBHA'
-      onChange={(e) => this.setSanctions(e)}
+      onChange={(e) => this.checkSanctions(e)}
     />
     NBHA
     </div>
@@ -66,7 +71,7 @@ render() {
       type='checkbox'
       checked={this.state.NE4D}
       value='NE4D'
-      onChange={(e) => this.setSanctions(e)}
+      onChange={(e) => this.checkSanctions(e)}
     />
     NE4D
     </div>
@@ -76,7 +81,7 @@ render() {
       type='checkbox'
       checked={this.state.BBR}
       value='BBR'
-      onChange={(e) => this.setSanctions(e)}
+      onChange={(e) => this.checkSanctions(e)}
     />
     BBR
     </div>
@@ -86,7 +91,7 @@ render() {
       type='checkbox'
       checked={this.state.BRF}
       value='BBR'
-      onChange={(e) => this.setSanctions(e)}
+      onChange={(e) => this.checkSanctions(e)}
     />
     BRF
     </div>
@@ -96,7 +101,7 @@ render() {
       type='checkbox'
       checked={this.state.Open}
       value='Open'
-      onChange={(e) => this.setSanctions(e)}
+      onChange={(e) => this.checkSanctions(e)}
     />
     Open
     </div>
@@ -106,7 +111,7 @@ render() {
       type='checkbox'
       checked={this.state.WPRA}
       value='WPRA'
-      onChange={(e) => this.setSanctions(e)}
+      onChange={(e) => this.checkSanctions(e)}
     />
     WPRA
     </div>
