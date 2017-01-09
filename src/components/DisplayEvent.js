@@ -34,8 +34,8 @@ toggleFavorite() {
         <div className='main-card container'
           onClick={this.toggleHideDisplay.bind(this)}
           >
+            <p className='sanctions'> {sanctions}</p>
             <h5>{event.title}</h5>
-            <p> {sanctions}</p>
             <div className='container'>
             <p className='date event-month'> {month} </p>
             <br></br>
@@ -46,10 +46,8 @@ toggleFavorite() {
             <button
               className='mark-favorite container'
               onClick={() => {this.toggleFavorite()}}>
-                ☆
+                ♡
               </button>
-
-
           </div>
 
           <section

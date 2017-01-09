@@ -20,7 +20,7 @@ render() {
           className='addEvent-btn'
         >
         <Link to="addnewevent"
-          className='link'> <p className='button-text'>ADD NEW</p> </Link>
+          className='link'> <p className='button-text'>+</p> </Link>
         </button>
 
         <h2 className='title'>Barrel Race Tracker</h2>
@@ -34,7 +34,7 @@ render() {
           >
         <Link to="favorites"
           className='link'
-          > <p className='button-text'>FAVES</p> </Link>
+          > <p className='button-text'>♡</p> </Link>
         </button>
     </section>
     )

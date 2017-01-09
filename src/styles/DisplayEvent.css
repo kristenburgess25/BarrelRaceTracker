@@ -66,13 +66,13 @@ margin: auto;
 .mark-favorite {
   font-size: 15px;
   text-align: center;
-  position: relative;
+  margin-top: -35px;
+  margin-left: 75%;
   background-color: gray;
-  margin-left: 70%;
 }
 
 .mark-favorite:hover {
-  background-color: yellow;
+  background-color: red;
 }
 
 .location {
@@ -80,7 +80,13 @@ margin: auto;
   font-size: 12px;
   position: absolute;
   margin-left: 75%;
-  margin-top: -5%;
+  margin-top: -8%;
+  color: navy;
+}
+
+.sanctions {
+  color: navy;
+  font-size: 12px;
 }
 
 h5 {
