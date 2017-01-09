@@ -1,6 +1,6 @@
 .sanction-box, .filter-date, .filter-money, .filter-location {
   display: inline-block;
-  padding: 5px 6px;
+  padding: 3px 6px;
 }
 
 .filter-form {
@@ -13,4 +13,5 @@ margin: 0;
 border: solid 1px #212121;
 border-radius: 3px;
 text-align: center;
+height: 12px;
   }
