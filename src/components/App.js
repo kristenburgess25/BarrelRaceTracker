@@ -49,9 +49,6 @@ filteredDisplay(filteredEvents) {
   this.setState({filteredEvents: filteredEvents});
 }
 
-setFilters(filters){
-  console.log(filters)
-}
 
 showFilter(e) {
   this.setState({hideFilter: !this.state.hideFilter})
@@ -70,7 +67,6 @@ showFilter(e) {
       <div hidden={this.state.hideFilter}>
         <Filter
           eventList={eventList}
-          setFilters={this.setFilters.bind(this)}
           filteredDisplay={this.filteredDisplay.bind(this)}
         />
       </div>

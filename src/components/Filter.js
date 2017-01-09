@@ -44,20 +44,16 @@ filterByMoney(e) {
   let filteredEvents = this.props.eventList.filter(event => {
     return event.addedmoney >= e.target.value
   })
-  console.log(filteredEvents)
   this.props.filteredDisplay(filteredEvents);
   } else {
     this.props.filteredDisplay(null)
   }
 }
 
-
   setSanctions(e) {
-    const sanctions= this.state.sanctions
+    const sanctions= this.state.sanctions;
     const checkedS = e.target.value
-    if(!sanctions.length){
-      sanctions.push(checkedS)
-    } else if(sanctions.length){
+    if(sanctions.length){
     for(var i=0; i<sanctions.length; i++) {
       if(sanctions[i] === checkedS ) {
         return
@@ -65,15 +61,15 @@ filterByMoney(e) {
        sanctions.push(checkedS)
       }
     }
-  }
-  this.setFilters();
+  } else if(!sanctions.length){
+      sanctions.push(checkedS)
+    }
+  this.checkSanctions(sanctions);
 }
 
-setFilters(){
-  const filters= this.state
-  this.props.setFilters(filters)
+checkSanctions(sanctions) {
+  console.log(sanctions)
 }
-
 
 
 render () {
