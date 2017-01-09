@@ -1,0 +1,16 @@
+.sanction-box, .filter-date, .filter-money, .filter-location {
+  display: inline-block;
+  padding: 5px 6px;
+}
+
+.filter-form {
+  border: 3px solid teal;
+}
+
+input {
+font-size: 14px;
+margin: 0;
+border: solid 1px #212121;
+border-radius: 3px;
+text-align: center;
+  }

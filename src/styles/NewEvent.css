@@ -1,0 +1,21 @@
+.new-event-input {
+font-size: 14px;
+margin: 10px auto;
+padding: 5px 13px;
+border: solid 1px #212121;
+border-radius: 3px;
+text-align: center;
+margin-right: 20px;
+  }
+
+.input-label {
+  display: inline;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.save-event-button {
+  background-color: white;
+  color: crimson;
+  margin: auto;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { reference } from '../firebase'
-
+import '../styles/NewEvent.css'
 
 class NewEvent extends Component {
   constructor() {
@@ -56,9 +56,9 @@ class NewEvent extends Component {
 
 const form = inputFields.map(field =>
   <div className='new-input-field'>
-    <p>  {field} : </p>
+    <p className='input-label'>  {field} : </p>
            <input
-           className={`${field}-input`}
+           className={`${field}-input new-event-input`}
             value={this.state[field]}
              placeholder='.....'
              onChange={(e) => this.setState({

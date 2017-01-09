@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Filter.css'
 
 class Filter extends Component {
   constructor() {
@@ -74,9 +75,9 @@ setFilters(){
 render () {
 
   return (
-    <div>
-    <p> Sanction : </p>
+    <div className='filter-form'>
     <form>
+    <p className='sanction-box'> Sanction : </p>
     <div className='sanction-box'>
     <input
       className='sanction-check'
@@ -106,22 +107,26 @@ render () {
     BBR
     </div>
     </form>
-
-    <p> From Date : </p>
+    <br></br>
+    <p className='filter-date'> From Date : </p>
     <input
+    className='filter-date'
     type='date'
     value={this.state.date}
     onChange={(e) => this.filterByDate(e)}
     />
-  <p> Added Money Greater Than </p>
+  <br></br>
+  <p className='filter-money'> Added Money > </p>
     $ <input
+    className='filter-money'
     type='value'
     value={this.state.addedMoney}
     onChange={(e)=> this.filterByMoney(e)}
     />
-    <p> State : </p>
+  <br></br>
+  <p className='filter-location'> State : </p>
     <select
-      className='state-dropdown'
+      className='state-dropdown filter-location'
       value={this.state.state}
       onChange={(e)=> this.filterByState(e)}
     >
