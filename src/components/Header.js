@@ -8,6 +8,8 @@ render() {
 
     return (
       <section className="App-header">
+        <h2 className='title'>Barrel Race Tracker</h2>
+        <nav>
         <button
           className='all-events-btn'
           >
@@ -22,9 +24,6 @@ render() {
         <Link to="addnewevent"
           className='link'> <p className='button-text'>+</p> </Link>
         </button>
-
-        <h2 className='title'>Barrel Race Tracker</h2>
-
         <button
           onClick={(e) => this.props.showFilter(e)}>
            <p className='button-text'>FILTER</p>
@@ -36,6 +35,7 @@ render() {
           className='link'
           > <p className='button-text'>♡</p> </Link>
         </button>
+      </nav>
     </section>
     )
   }

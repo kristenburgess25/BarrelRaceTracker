@@ -1,13 +1,15 @@
 button {
   border: none;
-  text-align: center;
-  font-size: 10px;
+  font-size: fill;
   border-radius: 2px;
   border: 2px solid black;
   background-color: gray;
   text-decoration: none;
   opacity: 0.8;
-  margin: 10px 10px;
+  display: inline-flex;
+  margin: 0px 2px 5px 5px;
+  width: 20%;
+  height: 5%;
 }
 
 button:hover {
@@ -15,9 +17,19 @@ button:hover {
     background-color: maroon;
   }
 
+.button-text {
+  text-align: center;
+  padding: 0px;
+}
+
+nav {
+  margin: auto;
+  text-align: center;
+  width: fill;
+}
 
 .App-header {
-    background: url('../images/barrelbanner.jpg') center;
+    background: teal;
     height: inherit;
   }
 
@@ -26,23 +38,11 @@ button:hover {
     letter-spacing: 2px;
   }
 
-.all-events-btn {
-  margin-right: auto;
-}
-
-.favorites-btn {
-  float: right;
-}
-
-.addEvent-btn{
-  float: right;
-}
-
 .title {
   font-size: 30px;
   letter-spacing: 4px;
   text-align: center;
-  color: teal;
+  color: black;
   }
 
 .button-text {
