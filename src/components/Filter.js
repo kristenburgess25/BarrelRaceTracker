@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Filter.css'
 import LocationFilter from './LocationFilter'
+import SanctionsFilter from './SanctionsFilter'
 
 class Filter extends Component {
   constructor() {
@@ -54,26 +55,10 @@ if(filteredEvents){
   }
 }
 
-  setSanctions(e) {
-    const sanctions= this.state.sanctions;
-    const checkedS = e.target.value
-    if(sanctions.length){
-    for(var i=0; i<sanctions.length; i++) {
-      if(sanctions[i] === checkedS ) {
-        return
-      } else {
-       sanctions.push(checkedS)
-      }
-    }
-  } else if(!sanctions.length){
-      sanctions.push(checkedS)
-    }
-  this.checkSanctions(sanctions);
+setSanctions(){
+
 }
 
-checkSanctions(sanctions) {
-  console.log(sanctions)
-}
 
 
 render () {
@@ -82,37 +67,9 @@ render () {
 
   return (
     <div className='filter-form'>
-    <form>
-    <p className='sanction-box'> Sanction : </p>
-    <div className='sanction-box'>
-    <input
-      className='sanction-check'
-      type='checkbox'
-      value='NBHA'
-      onChange={(e) => this.setSanctions(e)}
-    />
-    NBHA
-    </div>
-
-    <div className='sanction-box'>
-    <input
-      className='sanction-check'
-      type='checkbox'
-      value='NE-4D'
-      onChange={(e) => this.setSanctions(e)}
-    />
-    NE4D
-    </div>
-
-    <div className='sanction-box'>
-    <input className='sanction-check'
-      type='checkbox'
-      value='BBR'
-      onChange={(e) => this.setSanctions(e)}
-    />
-    BBR
-    </div>
-    </form>
+    <SanctionsFilter
+      setSanctions={this.setSanctions.bind(this)}
+      />
     <br></br>
     <p className='filter-date'> From Date : </p>
     <input
@@ -134,6 +91,11 @@ render () {
     filterByState={this.filterByState.bind(this)}
     eventlist={eventList}
   />
+<button
+  className='set-filters'
+ >
+Set Filters
+</button>
     </div>
     )
   }
