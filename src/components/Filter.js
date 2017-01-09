@@ -55,8 +55,15 @@ if(filteredEvents){
   }
 }
 
-setSanctions(){
-
+filterBySanction(sanctions){
+  if(sanctions){
+    let filteredEvents = this.props.eventList.filter(event => {
+      return event.sanction.includes(sanctions)
+    })
+    this.props.filteredDisplay(filteredEvents);
+  } else {
+    this.props.filteredDisplay(null);
+    }
 }
 
 
@@ -68,7 +75,7 @@ render () {
   return (
     <div className='filter-form'>
     <SanctionsFilter
-      setSanctions={this.setSanctions.bind(this)}
+      setSanctions={this.filterBySanction.bind(this)}
       />
     <br></br>
     <p className='filter-date'> From Date : </p>

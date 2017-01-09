@@ -12,7 +12,6 @@ class SanctionsFilter extends Component {
 setSanctions(e) {
   const sanctions= this.state.sanctions;
   const checkedSanction = e.target.value
-  debugger;
   if(sanctions.length === 0) {
     sanctions.push(checkedSanction)
   } else if(sanctions.length > 0) {
@@ -22,6 +21,7 @@ setSanctions(e) {
       }
     }
   }
+  this.props.setSanctions(sanctions)
 }
 
 render() {
@@ -53,10 +53,37 @@ render() {
     <div className='sanction-box'>
     <input className='sanction-check'
       type='checkbox'
-      value='BBR'
+      value='Better Barrel Races'
       onChange={(e) => this.setSanctions(e)}
     />
     BBR
+    </div>
+    <div className='sanction-box'>
+    <input
+      className='sanction-check'
+      type='checkbox'
+      value='BBR'
+      onChange={(e) => this.setSanctions(e)}
+    />
+    BRF
+    </div>
+    <div className='sanction-box'>
+    <input
+      className='sanction-check'
+      type='checkbox'
+      value='Open'
+      onChange={(e) => this.setSanctions(e)}
+    />
+    Open
+    </div>
+    <div className='sanction-box'>
+    <input
+      className='sanction-check'
+      type='checkbox'
+      value='WPRA'
+      onChange={(e) => this.setSanctions(e)}
+    />
+    WPRA
     </div>
     </form>
     </div>
