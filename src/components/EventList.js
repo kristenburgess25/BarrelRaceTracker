@@ -8,13 +8,19 @@ class EventList extends Component {
 
     const { eventList } = this.props;
 
-    let events = eventList.map(event =>
+    const sortedEvents = eventList.sort(function (a, b) {
+      return Date.parse(a.date) - Date.parse(b.date)
+  });
+
+    let events = sortedEvents.map(event =>
       <DisplayEvent
         key={event.key}
         event={event}
         toggleFavorite={this.props.toggleFavorite}
       />
     )
+
+  console.log(sortedEvents)
 
     return (
       <div className="event-list">

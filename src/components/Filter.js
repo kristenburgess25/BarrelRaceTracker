@@ -39,13 +39,13 @@ filterByState(e) {
 }
 
 filterByMoney(e) {
-  this.setState({addedmoney: e.target.value})
-  if (this.state.addedmoney){
-  let filteredEvents = this.props.eventList.filter(event => {
-    return event.addedmoney >= e.target.value
+let filteredEvents = this.props.eventList.filter(event => { if (event.addedmoney >= e.target.value){
+    return event
+    }
   })
+if(filteredEvents){
   this.props.filteredDisplay(filteredEvents);
-  } else {
+} else {
     this.props.filteredDisplay(null)
   }
 }

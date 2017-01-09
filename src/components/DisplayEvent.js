@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import '../styles/DisplayEvent.css'
+// import Location from './Location.js';
+import Map from './Map.js'
+import '../styles/DisplayEvent.css';
 import moment from 'moment';
 
 class DisplayEvent extends Component {
@@ -95,6 +97,7 @@ toggleFavorite() {
 
           <h4> Description </h4>
           <p> {event.description}</p>
+
       </section>
     </section>
     );
