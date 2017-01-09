@@ -7,7 +7,11 @@ class Favorites extends Component {
 
     const { eventList } = this.props;
 
-    let favoritelist = eventList.filter(event =>
+    const sortedEvents = eventList.sort(function (a, b) {
+      return Date.parse(a.date) - Date.parse(b.date)
+  });
+
+    let favoritelist = sortedEvents.filter(event =>
     event.favorite === true)
 
     let favorites= favoritelist.map(event =>
