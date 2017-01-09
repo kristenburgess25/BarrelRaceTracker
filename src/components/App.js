@@ -5,7 +5,6 @@ import Favorites from './Favorites';
 import NewEvent from './NewEvent';
 import Header from './Header';
 import SearchBar from './SearchBar';
-import Footer from './Footer';
 import Sort from './Sort';
 import Filter from './Filter';
 import { map, extend } from 'lodash';

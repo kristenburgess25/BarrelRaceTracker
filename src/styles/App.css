@@ -1,51 +1,19 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: teal;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.favorites {
-  color: yellow;
-}
-
-.link {
-  text-decoration: none;
-  letter-spacing: 2px;
-}
-
-.sanction-box {
-  display: block;
-  padding: 2px;
-}
 
 input {
 font-size: 14px;
-width: 300px;
+width: 200px;
 margin: 0;
 padding: 5px 13px;
 border: solid 1px #212121;
 border-radius: 3px;
+text-align: center;
   }
 
 .searchbar{
 padding: 5px 0px;
+text-align: center;
 }
 
-h2 {
-  font-size: 35px;
-  letter-spacing: 3px;
+.App {
+width: 100%;
 }

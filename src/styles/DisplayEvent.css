@@ -1,71 +1,91 @@
 h4 {
   background-color: teal;
   color: white;
-  text-align: center;;
-  height: 20px;
+  text-align: center;
+  height: 25px;
   font-size: 12px;
-  padding-left: 8px;
   padding-top: 3px;
 }
 
 .event-card {
-  width: 80%;
-  margin: auto;
-  border-color: black;
-  border-width: 5px;
+  width: 100%;
+  display: block;
+  border: 2px solid teal;
   background-color: white;
   text-align: center;
+  margin-bottom: 5px;
 }
 
-.showmore-btn {
+.labels {
   display: block;
-  margin: auto;
+  color: white;
+  font-size: 10px
 }
 
-p {
-  font-size: 12px;
-  text-align: center;
-  display: inline-block;
-}
-
-.details {
+.values {
   display: block;
+  font-size: 10px;
+  text-align: justify;
 }
-
 
 .values-container {
   display: inline-block;
+  text-align: justify;
+  margin-top: -12px;
+  margin-bottom: -20px;
 }
 
 .labels-container {
   display: inline-block;
   margin-right: 30%;
   background-color: gray;
+  opacity: 0.9;
   height: 100%;
+  width: 20%;
+  float: left;
+  margin-top: -12px;
+  margin-bottom: -20px;
 }
 
 .date {
-  float: left;
-  margin: auto;
+position: absolute;
+margin: auto;
 }
 
 .event-month {
   font-size: 20px;
-  margin: auto;
+  margin-left: 20px
+  ;
 }
 
 .event-day {
   font-size: 16px;
-
+  margin-left: 20px;
 }
 
-.favorite-btn {
+.mark-favorite {
   font-size: 15px;
   text-align: center;
-  float: right;
+  position: relative;
   background-color: gray;
+  margin-left: 70%;
 }
 
-.favorite-btn:hover {
+.mark-favorite:hover {
   background-color: yellow;
+}
+
+.location {
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  margin-left: 75%;
+  margin-top: -5%;
+}
+
+h5 {
+  text-align: center;
+  font-size: 15px;
+  padding: 0px;
+  margin: 5px auto;
 }

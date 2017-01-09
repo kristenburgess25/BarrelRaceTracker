@@ -22,31 +22,34 @@ toggleFavorite() {
 }
 
 
-
   render() {
     const { event }  = this.props;
     const month = moment(event.date).format('MMM')
     const day = event.date.split('-')[2]
+    const time = moment(event.time).format('h:mm a')
+    const sanctions = event.sanction
 
     return (
         <section className="event-card">
-        <div
+        <div className='main-card container'
+          onClick={this.toggleHideDisplay.bind(this)}
           >
-          <h4> {event.title}</h4>
+            <h5>{event.title}</h5>
+            <p> {sanctions}</p>
+            <div className='container'>
             <p className='date event-month'> {month} </p>
             <br></br>
             <p className='date event-day'> {day} </p>
-            <p> {event.city}, {event.state}</p>
-              <button
-                className='favorite-btn'
-                onClick={() => {this.toggleFavorite()}}>
+            </div>
+            <p className='location'> {event.city}, {event.state}</p>
+            <br></br>
+            <button
+              className='mark-favorite container'
+              onClick={() => {this.toggleFavorite()}}>
                 ☆
               </button>
-            <button className='showmore-btn'
-              onClick={this.toggleHideDisplay.bind(this)}
-            >
-            See More Info
-            </button>
+
+
           </div>
 
           <section
@@ -56,34 +59,41 @@ toggleFavorite() {
 
         <h4> Details </h4>
           <div className='labels-container'>
-            <p className='details labels'>Location: </p>
-            <p className='details labels'>Added $$: </p>
-            <p className='details labels'>Time: </p>
+            <p className='labels'>Location: </p>
+            <p className='labels'>Added $$: </p>
+            <p className='labels'>Time: </p>
 
           </div>
 
           <div className='values-container'>
-          <p className='details values'>  {event.location} </p>
-          <p className='details values'>  {event.addedmoney} </p>
-          <p className='details values'>{event.time} </p>
+          <p className='values'>  {event.location} </p>
+          <p className='values'>  {event.addedmoney} </p>
+          <p className='values'>{time} </p>
 
           </div>
 
 
         <h4> Entries </h4>
           <div className='labels-container'>
-            <p className='labels'>Fee/Horse: $</p>
+            <p className='labels'>Fee/Horse: </p>
             <p className='labels'>Payout:</p>
           </div>
           <div className='values-container'>
-            <p className='values'>{event.entryfee} </p>
+            <p className='values'>$ {event.entryfee} </p>
             <p className='values'> {event.payout} </p>
           </div>
 
 
         <h4> Contact Info </h4>
-          <p> {event.contactName} </p>
-          <p> {event.contactNumber} </p>
+          <div className='labels-container'>
+            <p className='labels'>Name </p>
+            <p className='labels'>Number </p>
+          </div>
+          <div className='values-container'>
+            <p className='values'> {event.contactName} </p>
+            <p className='values'> {event.contactNumber} </p>
+          </div>
+
 
           <h4> Description </h4>
           <p> {event.description}</p>

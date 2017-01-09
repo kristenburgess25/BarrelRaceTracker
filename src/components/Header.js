@@ -7,34 +7,36 @@ class Header extends Component {
 render() {
 
     return (
-      <div className="App-header">
-        <h2>Barrel Race Tracker</h2>
+      <section className="App-header">
         <button
-          className='home-btn'
+          className='all-events-btn'
           >
         <Link to="/"
           className='link'>
-          ALL EVENTS
+          <p className='button-text'>ALL</p>
          </Link>
+        </button>
+        <button
+          className='addEvent-btn'
+        >
+        <Link to="addnewevent"
+          className='link'> <p className='button-text'>ADD NEW</p> </Link>
+        </button>
+
+        <h2 className='title'>Barrel Race Tracker</h2>
+
+        <button
+          onClick={(e) => this.props.showFilter(e)}>
+           <p className='button-text'>FILTER</p>
         </button>
         <button
           className='favorites-btn'
           >
         <Link to="favorites"
           className='link'
-          > FAVORITES </Link>
+          > <p className='button-text'>FAVES</p> </Link>
         </button>
-        <button
-          className='addEvent-btn'
-        >
-        <Link to="addnewevent"
-          className='link'> ADD NEW EVENT </Link>
-        </button>
-        <button
-          onClick={(e) => this.props.showFilter(e)}>
-           FILTER
-        </button>
-      </div>
+    </section>
     )
   }
 }
