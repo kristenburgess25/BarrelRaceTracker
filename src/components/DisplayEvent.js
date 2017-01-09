@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import Location from './Location.js';
-import Map from './Map.js'
+// import Map from './Map.js'
 import '../styles/DisplayEvent.css';
 import moment from 'moment';
 
@@ -50,8 +50,8 @@ toggleFavorite() {
             <button
               className='mark-favorite container'
               onClick={() => {this.toggleFavorite()}}>
-                ♡
-              </button>
+              FAVE
+            </button>
             <br></br>
             <p className='location'> {event.city}, {event.state}</p>
 

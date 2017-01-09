@@ -8,11 +8,12 @@ class Filter extends Component {
       sanctions: [],
       addedmoney: '',
       date: '',
+      state: '',
     }
   }
 
 filterByDate(e) {
-  debugger;
+  this.setState({date: e.target.value});
   if (e.target.value) {
   let filteredEvents = this.props.eventList.filter(event => {
     const formattedDates = Date.parse(event.date);
@@ -28,6 +29,7 @@ filterByDate(e) {
 }
 
 filterByState(e) {
+  this.setState({state: e.target.value});
   if (e.target.value) {
   let filteredEvents = this.props.eventList.filter(event => {
     return event.state.toUpperCase().match(e.target.value)
@@ -39,6 +41,7 @@ filterByState(e) {
 }
 
 filterByMoney(e) {
+  this.setState({addedmoney: e.target.value});
 let filteredEvents = this.props.eventList.filter(event => { if (event.addedmoney >= e.target.value){
     return event
     }
