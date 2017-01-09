@@ -100,7 +100,6 @@ showFilter(e) {
           />
         )}
       />
-      <Footer />
       </div>
       </BrowserRouter>
     );

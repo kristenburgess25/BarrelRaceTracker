@@ -5,7 +5,6 @@ class Filter extends Component {
     super();
     this.state = {
       sanctions: [],
-      state: '',
       addedmoney: '',
       date: '',
     }
@@ -24,8 +23,7 @@ filterByDate(e) {
 }
 
 filterByState(e) {
-  this.setState({state: e.target.value})
-  if (this.state.state) {
+  if (e.target.value) {
   let filteredEvents = this.props.eventList.filter(event => {
     return event.state.toUpperCase().match(e.target.value)
   })

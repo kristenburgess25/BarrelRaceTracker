@@ -36,7 +36,6 @@ toggleFavorite() {
             <p className='date event-month'> {month} </p>
             <br></br>
             <p className='date event-day'> {day} </p>
-            <p> {event.location} </p>
             <p> {event.city}, {event.state}</p>
               <button
                 className='favorite-btn'
@@ -50,18 +49,37 @@ toggleFavorite() {
             </button>
           </div>
 
-          <div
+          <section
             hidden={this.state.hideDisplay}
             className='hiddeninfo'
           >
+
         <h4> Details </h4>
-          <p> Sanction: {event.saction}</p>
-          <p> Added $$: {event.addedmoney} </p>
-          <p> Time: {event.time} </p>
+          <div className='labels-container'>
+            <p className='details labels'>Location: </p>
+            <p className='details labels'>Added $$: </p>
+            <p className='details labels'>Time: </p>
+
+          </div>
+
+          <div className='values-container'>
+          <p className='details values'>  {event.location} </p>
+          <p className='details values'>  {event.addedmoney} </p>
+          <p className='details values'>{event.time} </p>
+
+          </div>
+
 
         <h4> Entries </h4>
-          <p>Fee/Horse: ${event.entryfee} </p>
-          <p> Payout: {event.payout} </p>
+          <div className='labels-container'>
+            <p className='labels'>Fee/Horse: $</p>
+            <p className='labels'>Payout:</p>
+          </div>
+          <div className='values-container'>
+            <p className='values'>{event.entryfee} </p>
+            <p className='values'> {event.payout} </p>
+          </div>
+
 
         <h4> Contact Info </h4>
           <p> {event.contactName} </p>
@@ -69,7 +87,7 @@ toggleFavorite() {
 
           <h4> Description </h4>
           <p> {event.description}</p>
-      </div>
+      </section>
     </section>
     );
   }

@@ -9,15 +9,12 @@ h4 {
 }
 
 .event-card {
-  height: 20%;
   width: 80%;
   margin: auto;
   border-color: black;
   border-width: 5px;
   background-color: white;
-  display: block;
   text-align: center;
-
 }
 
 .showmore-btn {
@@ -31,7 +28,21 @@ p {
   display: inline-block;
 }
 
+.details {
+  display: block;
+}
 
+
+.values-container {
+  display: inline-block;
+}
+
+.labels-container {
+  display: inline-block;
+  margin-right: 30%;
+  background-color: gray;
+  height: 100%;
+}
 
 .date {
   float: left;
