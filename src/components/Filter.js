@@ -66,8 +66,6 @@ filterBySanction(sanctions){
     }
 }
 
-
-
 render () {
 
   const { eventList } = this.props

@@ -4,7 +4,6 @@ import '../styles/Filter.css'
 class LocationFilter extends Component {
 
   filterByState(e) {
-    debugger;
     let selectedState = e.target.value;
     if(e.target.value){
     this.props.filterByState(selectedState)
