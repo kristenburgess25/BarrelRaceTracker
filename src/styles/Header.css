@@ -1,15 +1,9 @@
 button {
   border: none;
   font-size: fill;
-  border-radius: 2px;
-  border: 2px solid black;
-  background-color: gray;
   text-decoration: none;
   opacity: 0.8;
-  display: inline-flex;
-  margin: 0px 2px 5px 5px;
-  width: 20%;
-  height: 5%;
+  width: 25%;
 }
 
 button:hover {
@@ -23,9 +17,9 @@ button:hover {
 }
 
 nav {
-  margin: auto;
-  text-align: center;
-  width: fill;
+display: flex;
+text-align: center;
+width: 100%;
 }
 
 .App-header {
