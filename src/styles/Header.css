@@ -2,7 +2,7 @@ button {
   border: none;
   font-size: fill;
   text-decoration: none;
-  opacity: 0.8;
+
   width: 25%;
 }
 
@@ -10,6 +10,10 @@ button:hover {
     cursor: pointer;
     background-color: maroon;
   }
+
+button.active {
+  background-color: magenta;
+}
 
 .button-text {
   text-align: center;
@@ -24,6 +28,8 @@ width: 100%;
 
 .App-header {
     background: teal;
+
+    width: 100%;
   }
 
 .link {
@@ -36,6 +42,7 @@ width: 100%;
   letter-spacing: 4px;
   text-align: center;
   color: black;
+  margin-top: 20px;
   }
 
 .button-text {

@@ -4,3 +4,8 @@
   padding-bottom: 5px;
   text-align: center;
 }
+
+.event-list {
+  background-color: magenta;
+  width: 100%;
+}

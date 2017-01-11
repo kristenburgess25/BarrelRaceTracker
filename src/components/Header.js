@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import '../styles/Header.css'
+import classnames from 'classnames';
 
 class Header extends Component {
+  constructor(){
+    super()
+    this.state = {
+      allActive: true,
+      addActive: false,
+      facvoritesActive: false,
+    }
+  }
 
 render() {
+
+  let classes = classnames('all-events-btn', {active: this.state.allActive});
 
     return (
       <section className="App-header">
         <h2 className='title'>Barrel Race Tracker</h2>
         <nav>
         <button
-          className='all-events-btn'
+          className={classes}
           >
         <Link to="/"
           className='link'>
