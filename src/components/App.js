@@ -7,6 +7,7 @@ import Header from './Header';
 import SearchBar from './SearchBar';
 import Sort from './Sort';
 import Filter from './Filter';
+import LandingPage from './LandingPage'
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
 import { BrowserRouter, Match } from 'react-router'
@@ -24,7 +25,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
   reference.on('value', (snapshot) => {
     const barrelraces = snapshot.val() || {};
     this.setState({
@@ -74,7 +75,12 @@ showFilter(e) {
           eventList={eventList}
           filteredDisplay={this.filteredDisplay.bind(this)}
         />
-        <Match exactly pattern="/" render={()=> (
+        <Match exactly pattern="/" render={() => (
+          <LandingPage
+            />
+          )}
+        />
+      <Match exactly pattern="/events" render={()=> (
             <EventList
               eventList={filteredEvents?filteredEvents:eventList}
               toggleFavorite={this.toggleFavorite.bind(this)}

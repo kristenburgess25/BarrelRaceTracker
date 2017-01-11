@@ -13,7 +13,7 @@ render() {
         <button
           className='all-events-btn'
           >
-        <Link to="/"
+        <Link to="/events"
           className='link'>
           <p className='button-text'>ALL</p>
          </Link>
@@ -28,13 +28,11 @@ render() {
           onClick={(e) => this.props.showFilter(e)}>
            <p className='button-text'>FILTER</p>
         </button>
-        <button
-          className='favorites-btn'
-          >
+      
         <Link to="favorites"
           className='link'
           > <p className='button-text'>♡</p> </Link>
-        </button>
+
       </nav>
     </section>
     )
