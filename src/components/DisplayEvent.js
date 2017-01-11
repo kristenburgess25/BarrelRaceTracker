@@ -33,8 +33,8 @@ toggleFavorite() {
     const sanctions = event.sanction
 
     return (
-        <section className="event-card">
-        <div className='main-card container'>
+        <section className="main-card-container">
+        <div className='event-card'>
             <p className='sanctions'> {sanctions}</p>
             <h5
               onClick={this.toggleHideDisplay.bind(this)}

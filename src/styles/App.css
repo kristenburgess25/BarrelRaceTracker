@@ -1,8 +1,9 @@
 
 .searchbar{
-margin: 10px auto;
+margin: auto;
 text-align: center;
 display: block;
+background-color: magenta;
 }
 
 .search-input{
@@ -12,4 +13,5 @@ display: block;
 
 .App {
 width: 100%;
+background-color: magenta;
 }
