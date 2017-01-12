@@ -31,16 +31,14 @@ h4 {
 
 .mark-favorite-container {
   width: 20%;
+  height: 100px;
+  color: blue;
+  background: url('../images/heart.png') no-repeat center;
+  background-size: 20px;
 }
 
 .horiz-block {
   display: inline-block;
-}
-
-.mark-favorite {
-  height: 20px;
-  color: blue;
-  text-align: center;
 }
 
 .labels-container, .values-container {
@@ -59,4 +57,8 @@ h4 {
 .values-container {
   width: 70%;
   text-align: left;
+}
+
+span {
+  display: inline-block;
 }

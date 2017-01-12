@@ -48,14 +48,10 @@ toggleFavorite() {
               >{event.title}
             </h5>
             </div>
-            <div className="mark-favorite-container horiz-block">
-            <button
-              className='mark-favorite'
-              onClick={() => {this.toggleFavorite()}}>
-              FAVE
-            </button>
+            <div className="mark-favorite-container horiz-block"
+            onClick={() => {this.toggleFavorite()}}>
+          
             </div>
-
           </div>
 
           <section
@@ -82,7 +78,7 @@ toggleFavorite() {
             <p className='labels'>Payout:</p>
           </div>
           <div className='values-container'>
-            <p className='values'> {event.entryfee} </p>
+            <p className='values'> $ {event.entryfee} </p>
             <p className='values'> {event.payout} </p>
           </div>
 
