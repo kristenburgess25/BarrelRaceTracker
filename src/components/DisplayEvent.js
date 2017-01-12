@@ -34,26 +34,27 @@ toggleFavorite() {
 
     return (
         <section className="main-card-container">
-        <div className='event-card'>
-            <p className='sanctions'> {sanctions}</p>
+          <div className='event-card'>
+            <div className='date-container horiz-block'>
+              <p>{weekday}</p>
+              <p>{month}</p>
+              <p>{day}</p>
+            </div>
+            <div className='horiz-block main-block'>
+              <span className='sanctions'> {sanctions}</span>
+              <span className='location'> {event.city}, {event.state}</span>
             <h5
               onClick={this.toggleHideDisplay.bind(this)}
               >{event.title}
             </h5>
-            <div className='container'>
-              <time className="icon">
-                <em>{weekday}</em>
-                <strong>{month}</strong>
-                <span>{day}</span>
-                </time>
             </div>
+            <div className="mark-favorite-container horiz-block">
             <button
-              className='mark-favorite container'
+              className='mark-favorite'
               onClick={() => {this.toggleFavorite()}}>
               FAVE
             </button>
-            <br></br>
-            <p className='location'> {event.city}, {event.state}</p>
+            </div>
 
           </div>
 
@@ -67,14 +68,11 @@ toggleFavorite() {
             <p className='labels'>Location: </p>
             <p className='labels'>Added $$: </p>
             <p className='labels'>Time: </p>
-
           </div>
-
           <div className='values-container'>
           <p className='values'>  {event.location} </p>
           <p className='values'>  {event.addedmoney} </p>
           <p className='values'>{time} </p>
-
           </div>
 
 
@@ -84,7 +82,7 @@ toggleFavorite() {
             <p className='labels'>Payout:</p>
           </div>
           <div className='values-container'>
-            <p className='values'>$ {event.entryfee} </p>
+            <p className='values'> {event.entryfee} </p>
             <p className='values'> {event.payout} </p>
           </div>
 

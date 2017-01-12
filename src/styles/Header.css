@@ -2,7 +2,7 @@ button {
   border: none;
   font-size: fill;
   text-decoration: none;
-
+  border-radius: 5px;
   width: 25%;
 }
 
@@ -24,6 +24,7 @@ nav {
 display: flex;
 text-align: center;
 width: 100%;
+justify-content: space-between;
 }
 
 .App-header {

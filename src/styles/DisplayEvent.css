@@ -7,137 +7,53 @@ h4 {
 
 }
 
-.event-card {
+.event-card, .hiddeninfo {
   width: 75%;
-  display: flex;
-  flex-direction: column;
   background-color: white;
   text-align: center;
   margin: auto;
-  justify-content: center;
 }
 
-/*.labels {
-  display: block;
-  color: white;
-  font-size: 10px
+.date-container{
+  margin: auto;
+  width: 25%;
 }
 
-.values {
-  display: block;
-  font-size: 10px;
-  text-align: justify;
+.main-block {
+  width: 50%;
 }
 
-.values-container {
+.date-container p{
+  color: red;
+  text-align: center;
+  margin: 0px;
+}
+
+.mark-favorite-container {
+  width: 20%;
+}
+
+.horiz-block {
   display: inline-block;
-  text-align: justify;
-  margin-top: -12px;
-  margin-bottom: -20px;
+}
+
+.mark-favorite {
+  height: 20px;
+  color: blue;
+  text-align: center;
+}
+
+.labels-container, .values-container {
+  display: inline-block;
 }
 
 .labels-container {
-  display: inline-block;
-  margin-right: 30%;
-  background-color: gray;
-  opacity: 0.9;
-  height: 100%;
-  width: 20%;
-  float: left;
-  margin-top: -12px;
-  margin-bottom: -20px;
-}*/
-
-time{
-  margin-left: 15px;
+  width: 23%;
+  text-align: left;
+  margin-left: 2%;
 }
 
-time.icon
-{
-  display: block;
-  position: relative;
-  width: 3.5em;
-  height: 3.5em;
-  background-color: #fff;
-  border-radius: 0.6em;
-  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
-  overflow: hidden;
-}
-
-time.icon *
-{
-  display: block;
-  width: 100%;
-  font-size: 0.8em;
-  font-weight: bold;
-  font-style: normal;
-  text-align: center;
-}
-
-time.icon strong
-{
-  position: absolute;
-  top: 0;
-  padding: 0.1em 0;
-  color: #fff;
-  background-color: teal;
-  border-bottom: 1px dashed gray;
-  box-shadow: 0 2px 0 gray;
-}
-
-time.icon em
-{
-  position: absolute;
-  bottom: 1.6em;
-  color: crimson;
-}
-
-time.icon span
-{
-  font-size: 1.5em;
-  letter-spacing: -0.05em;
-  padding-top: 1.25em;
-  color: #2f2f2f;
-}
-
-/*.mark-favorite {
-  text-align: center;
-  height: 50px;
-  width: 50px;
-  margin-top: -10px;
-  position: relative;
-  background-image: url('../images/heart.png') no-repeat;
-}
-
-.mark-favorite:hover {
-  background-color: red;
-  color: white;
-}
-
-.location {
-  text-align: center;
-  font-size: 12px;
-  position: absolute;
-  margin-left: 75%;
-  margin-top: -10%;
-  color: navy;
-}
-
-.sanctions {
-  color: navy;
-  font-size: 12px;
-  margin-bottom: 0px;
-}*/
-
-h5 {
-  text-align: center;
-  font-size: 15px;
-  padding: 0px;
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-
-h5:hover {
-  background-color: teal;
-  border: 5px solid gray;
+.values-container {
+  width: 70%;
+  text-align: left 5%;
 }
