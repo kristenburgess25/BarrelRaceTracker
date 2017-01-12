@@ -27,7 +27,6 @@ toggleFavorite() {
   render() {
     const { event }  = this.props;
     const month = moment(event.date).format('MMM')
-    const weekday = moment(event.date).format('dddd')
     const day = event.date.split('-')[2]
     const time = moment(event.time).format('h:mm a')
     const sanctions = event.sanction
@@ -43,7 +42,9 @@ toggleFavorite() {
             </div>
             <div className='horiz-block main-block'>
               <div className='top-block'>
-              <span className='sanctions'> {sanctions}</span>
+              <span className='sanctions'>
+                {sanctions}
+              </span>
               <span className='location'> {event.city}, {event.state}</span>
               </div>
             <h5

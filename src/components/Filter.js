@@ -74,7 +74,7 @@ render () {
     <div>
       <p className='filter-date'> FROM DATE: </p>
     <input
-    className='filter-input'
+    className='filter-input date'
     type='date'
     value={this.state.date}
     onChange={(e) => this.filterByDate(e)}
@@ -83,7 +83,7 @@ render () {
   <div>
     <p className='filter-money'> ADDED MONEY: $</p>
      <input
-    className='filter-input'
+    className='filter-input money'
     type='value'
     value={this.state.addedMoney}
     onChange={(e)=> this.filterByMoney(e)}

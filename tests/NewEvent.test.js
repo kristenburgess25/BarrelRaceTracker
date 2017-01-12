@@ -63,10 +63,6 @@ describe('NewEvent| Unit Test', () => {
     const wrapper = shallow(<NewEvent/>)
     assert.equal(wrapper.state('payout'), (''))
   });
-  it('sets initial state of contactName to an empty string', () => {
-    const wrapper = shallow(<NewEvent/>)
-    assert.equal(wrapper.state('conctactName'), (''))
-  });
   it('sets initial state of conctactNumber to an empty string', () => {
     const wrapper = shallow(<NewEvent/>)
     assert.equal(wrapper.state('contactNumber'), (''))
@@ -87,7 +83,6 @@ describe('NewEvent| Feature Test', () => {
     const userInput = wrapper.find('.title-input')
     userInput.simulate('change', {target: {value: 'Best Barrel Race'} })
     assert.equal(wrapper.state('title'), ('Best Barrel Race'))
-
   })
   it('should change the "date" state with new event info', () => {
     const wrapper = mount(<NewEvent/>)

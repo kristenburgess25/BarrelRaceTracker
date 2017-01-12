@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import '../styles/Header.css'
-import classnames from 'classnames';
 
 class Header extends Component {
   constructor(){
