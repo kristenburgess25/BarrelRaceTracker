@@ -32,24 +32,6 @@ setSanctions(sanction){
   }
 }
 
-// setSanctions(e) {
-//   const sanctions= this.state.sanctions;
-//   const checkedSanction = e.target.value
-//   debugger;
-//   if(sanctions.length === 0) {
-//     sanctions.push(checkedSanction)
-//   } else if(sanctions.length > 0) {
-//     for(var i=0; i<sanctions.length; i++) {
-//       if(checkedSanction == sanctions[i]){
-//         sanctions.slice([i])
-//      } else if(checkedSanction !== sanctions[i]) {
-//       sanctions.push(checkedSanction)
-//       }
-//     }
-//   }
-//   console.log(sanctions)
-// }
-
 render() {
 
   return(
