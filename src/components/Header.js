@@ -25,10 +25,10 @@ render() {
             addActive: false,
             favoritesActive: false
           })}
-          >
-        <Link to="/"
-          className='link'>
-          <p className='button-text'>ALL</p>
+        >
+          <Link to="/"
+            className='link'>
+            <p className='button-text'>ALL</p>
          </Link>
         </button>
         <button
@@ -39,8 +39,10 @@ render() {
             favoritesActive: false
           })}
         >
-        <Link to="addnewevent"
-          className='link'> <p className='button-text'>+</p> </Link>
+          <Link to="addnewevent"
+            className='link'>
+            <p className='button-text'>+</p>
+          </Link>
         </button>
         <button
           onClick={(e) => this.props.showFilter(e)}>
@@ -48,15 +50,16 @@ render() {
         </button>
         <button
           className={`favorites-btn ${this.state.favoritesActive}`}
+        >
+          <Link to="favorites"
+            className='link'
+            onClick={()=> this.setState({
+              allActive: false,
+              addActive: false,
+              favoritesActive: true
+            })}
           >
-        <Link to="favorites"
-          className='link'
-          onClick={()=> this.setState({
-            allActive: false,
-            addActive: false,
-            favoritesActive: true
-          })}
-          > <p className='button-text'>♡</p> </Link>
+          <p className='button-text'>♡</p> </Link>
         </button>
       </nav>
     </section>

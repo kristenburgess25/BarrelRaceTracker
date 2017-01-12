@@ -10,14 +10,14 @@ const Footer = () => {
         <Link to='/sort'>
           SORT
         </Link>
-       </button>
-       <button className='filter-btn'>
-         <Link to='/filter'>
-           FILTER
-         </Link>
-        </button>
+      </button>
+      <button className='filter-btn'>
+        <Link to='/filter'>
+          FILTER
+        </Link>
+      </button>
     </footer>
-    </div>
+  </div>
   )
 }
 

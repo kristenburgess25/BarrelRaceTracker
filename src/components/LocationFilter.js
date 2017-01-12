@@ -7,7 +7,7 @@ class LocationFilter extends Component {
     let selectedState = e.target.value;
     if(e.target.value){
     this.props.filterByState(selectedState)
-  } else {
+    } else {
     this.props.filterByState(null)
     }
   }
