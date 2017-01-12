@@ -34,7 +34,9 @@ toggleFavorite() {
 
     return (
         <section className="main-card-container">
-          <div className='event-card'>
+          <div className='event-card'
+            onClick={this.toggleHideDisplay.bind(this)}
+          >
             <div className='date-container horiz-block'>
               <p className='month'>{month}</p>
               <p className='day'>{day}</p>
@@ -45,15 +47,14 @@ toggleFavorite() {
               <span className='location'> {event.city}, {event.state}</span>
               </div>
             <h5
-              onClick={this.toggleHideDisplay.bind(this)}
+
               >{event.title}
             </h5>
             </div>
             <div className={`${event.favorite} mark-favorite-container horiz-block`}
             onClick={() => {this.toggleFavorite()}}>
-
             </div>
-          </div>  
+          </div>
 
           <section
             hidden={this.state.hideDisplay}
