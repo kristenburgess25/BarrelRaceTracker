@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Filter.css'
 import LocationFilter from './LocationFilter'
-import SanctionsFilter from './SanctionsFilter'
 
 class Filter extends Component {
   constructor() {
@@ -72,9 +71,6 @@ render () {
 
   return (
     <div className='filter-form'>
-    <SanctionsFilter
-      setSanctions={this.filterBySanction.bind(this)}
-      />
     <div>
       <p className='filter-date'> FROM DATE: </p>
     <input
@@ -97,11 +93,7 @@ render () {
     filterByState={this.filterByState.bind(this)}
     eventlist={eventList}
   />
-<button
-  className='set-filters'
- >
-Set Filters
-</button>
+    <br></br>
     </div>
     )
   }

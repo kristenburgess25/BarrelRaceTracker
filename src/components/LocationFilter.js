@@ -21,6 +21,7 @@ class LocationFilter extends Component {
           className='state-dropdown filter-location filter-input'
           onChange={(e)=> this.filterByState(e)}
         >
+        <option></option>
       	<option value="AL">Alabama</option>
       	<option value="AK">Alaska</option>
       	<option value="AZ">Arizona</option>
