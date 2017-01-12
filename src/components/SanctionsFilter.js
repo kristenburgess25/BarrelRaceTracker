@@ -55,7 +55,7 @@ render() {
   return(
     <div>
     <form>
-    <p className='sanction-box'> Sanction : </p>
+    <p className='sanction-title'> SANCTIONS : </p>
     <div className='sanction-box'>
     <input
       className='sanction-check'

@@ -16,9 +16,9 @@ class LocationFilter extends Component {
 
     return(
       <div className='location-dropwdown'>
-      <p className='filter-location'> State : </p>
+      <p className='filter-location'> STATE : </p>
         <select
-          className='state-dropdown filter-location'
+          className='state-dropdown filter-location filter-input'
           onChange={(e)=> this.filterByState(e)}
         >
       	<option value="AL">Alabama</option>

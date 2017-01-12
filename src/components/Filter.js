@@ -75,23 +75,24 @@ render () {
     <SanctionsFilter
       setSanctions={this.filterBySanction.bind(this)}
       />
-    <br></br>
-    <p className='filter-date'> From Date : </p>
+    <div>
+      <p className='filter-date'> FROM DATE: </p>
     <input
-    className='filter-date'
+    className='filter-input'
     type='date'
     value={this.state.date}
     onChange={(e) => this.filterByDate(e)}
     />
-  <br></br>
-  <p className='filter-money'> Added Money > </p>
-    $ <input
-    className='filter-money'
+  </div>
+  <div>
+    <p className='filter-money'> ADDED MONEY: $</p>
+     <input
+    className='filter-input'
     type='value'
     value={this.state.addedMoney}
     onChange={(e)=> this.filterByMoney(e)}
     />
-  <br></br>
+     </div>
   <LocationFilter
     filterByState={this.filterByState.bind(this)}
     eventlist={eventList}

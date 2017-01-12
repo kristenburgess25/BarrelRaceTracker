@@ -1,17 +1,32 @@
-.sanction-box, .filter-date, .filter-money, .filter-location {
-  display: inline-block;
-  padding: 3px 6px;
-}
+
 
 .filter-form {
   border: 3px solid teal;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-input {
-font-size: 14px;
-margin: 0;
-border: solid 1px #212121;
-border-radius: 3px;
-text-align: center;
-height: 12px;
-  }
+.filter-input {
+  font-size: 10px;
+  margin: 0;
+  border: solid 1px #212121;
+  border-radius: 3px;
+  text-align: center;
+  width: 30%;
+}
+
+p {
+  font-size: 10px;
+  color: white;
+}
+
+.sanction-box{
+  font-size: 10px;
+  display: inline-block;
+}
+
+.set-filters {
+  text-align: center;
+  margin: 5px auto;
+}
