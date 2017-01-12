@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import Location from './Location.js';
-// import Map from './Map.js'
 import '../styles/DisplayEvent.css';
 import moment from 'moment';
 
@@ -47,21 +45,19 @@ toggleFavorite() {
               </span>
               <span className='location'> {event.city}, {event.state}</span>
               </div>
-            <h5
-
-              >{event.title}
+            <h5>
+              {event.title}
             </h5>
             </div>
             <div className={`${event.favorite} mark-favorite-container horiz-block`}
-            onClick={() => {this.toggleFavorite()}}>
+                  onClick={() => {this.toggleFavorite()}}>
             </div>
-          </div>
+            </div>
 
           <section
             hidden={this.state.hideDisplay}
             className='hiddeninfo'
           >
-
         <h4> Details </h4>
           <div className='labels-container'>
             <p className='labels'>Location: </p>
@@ -69,9 +65,9 @@ toggleFavorite() {
             <p className='labels'>Time: </p>
           </div>
           <div className='values-container'>
-          <p className='values'>  {event.location?event.location:'N/A'} </p>
-          <p className='values'>  $ {event.addedmoney?event.addedmoney:'N/A'} </p>
-          <p className='values'>{time?time:'N/A'} </p>
+            <p className='values'>  {event.location?event.location:'N/A'} </p>
+            <p className='values'>  $ {event.addedmoney?event.addedmoney:'N/A'} </p>
+            <p className='values'>{time?time:'N/A'} </p>
           </div>
 
 

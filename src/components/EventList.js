@@ -10,7 +10,7 @@ class EventList extends Component {
 
     const sortedEvents = eventList.sort(function (a, b) {
       return Date.parse(a.date) - Date.parse(b.date)
-  });
+    });
 
     let events = sortedEvents.map(event =>
       <DisplayEvent

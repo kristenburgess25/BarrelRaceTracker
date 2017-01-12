@@ -80,21 +80,21 @@ showFilter(e) {
               toggleFavorite={this.toggleFavorite.bind(this)}
             />
           )}
-          />
-      <Match exactly pattern="/favorites" render={()=> (
+        />
+        <Match exactly pattern="/favorites" render={()=> (
             <Favorites
               eventList={filteredEvents?filteredEvents:eventList}
               toggleFavorite={this.toggleFavorite.bind(this)}
             />
           )}
         />
-      <Match exactly pattern="/addnewevent" render={ () => ( <NewEvent/>)}/>
-      <Match exactly pattern="/sort" render={ () => (
+        <Match exactly pattern="/addnewevent" render={ () => ( <NewEvent/>)}/>
+        <Match exactly pattern="/sort" render={ () => (
           <Sort
             eventList={eventList}
-          />
-        )}
-      />
+            />
+          )}
+        />
       </div>
       </BrowserRouter>
     );
