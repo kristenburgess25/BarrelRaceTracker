@@ -88,12 +88,6 @@ showFilter(e) {
           )}
         />
         <Match exactly pattern="/addnewevent" render={ () => ( <NewEvent/>)}/>
-        <Match exactly pattern="/sort" render={ () => (
-          <Sort
-            eventList={eventList}
-            />
-          )}
-        />
       </div>
       </BrowserRouter>
     );
