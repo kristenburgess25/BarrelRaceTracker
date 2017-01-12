@@ -8,7 +8,7 @@ h4 {
 }
 
 .event-card, .hiddeninfo {
-  width: 75%;
+  width: 90%;
   background-color: white;
   text-align: center;
   margin: auto;
@@ -68,5 +68,11 @@ background-size: 20px;
 }
 
 span {
-  display: inline-block;
+  font-size: 10px;
+  width: 50%;
+}
+
+.top-block {
+  display: flex;
+  margin: 0px;
 }
