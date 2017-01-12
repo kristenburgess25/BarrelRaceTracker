@@ -33,8 +33,16 @@ h4 {
   width: 20%;
   height: 100px;
   color: blue;
-  background: url('../images/heart.png') no-repeat center;
-  background-size: 20px;
+}
+
+.mark-favorite-container.false {
+background: url('../images/grayheart.png') no-repeat center;
+background-size: 20px;
+}
+
+.mark-favorite-container.true {
+    background: url('../images/redheart.png') no-repeat center;
+    background-size: 20px;
 }
 
 .horiz-block {

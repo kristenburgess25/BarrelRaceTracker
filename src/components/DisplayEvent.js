@@ -48,9 +48,9 @@ toggleFavorite() {
               >{event.title}
             </h5>
             </div>
-            <div className="mark-favorite-container horiz-block"
+            <div className={`${event.favorite} mark-favorite-container horiz-block`}
             onClick={() => {this.toggleFavorite()}}>
-          
+
             </div>
           </div>
 
