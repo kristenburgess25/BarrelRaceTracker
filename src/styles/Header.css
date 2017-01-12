@@ -8,11 +8,10 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: maroon;
   }
 
-button.active {
-  background-color: magenta;
+button.true {
+  background-color: #0F6669;
 }
 
 .button-text {

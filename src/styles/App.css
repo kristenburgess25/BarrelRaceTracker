@@ -3,7 +3,7 @@
 margin: auto;
 text-align: center;
 display: block;
-background-color: magenta;
+background-color: #0F6669;
 }
 
 .search-input{
@@ -14,5 +14,5 @@ background-color: magenta;
 
 .App {
 width: 100%;
-background-color: magenta;
+background-color: #0F6669;
 }

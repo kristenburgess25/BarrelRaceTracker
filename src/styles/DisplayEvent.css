@@ -29,7 +29,7 @@ h4 {
 }
 
 .date-container p{
-  color: red;
+  color: #4A4A4A;
   text-align: center;
   margin: 0px;
 }
@@ -84,7 +84,6 @@ span {
 
 .top-block {
   display: flex;
-  margin: 0px;
 }
 
 .description-text {

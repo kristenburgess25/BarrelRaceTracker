@@ -9,20 +9,23 @@ class Header extends Component {
     this.state = {
       allActive: true,
       addActive: false,
-      facvoritesActive: false,
+      favoritesActive: false,
     }
   }
 
 render() {
-
-  let classes = classnames('all-events-btn', {active: this.state.allActive});
 
     return (
       <section className="App-header">
         <h2 className='title'>Barrel Race Tracker</h2>
         <nav>
         <button
-          className={classes}
+          className={`all-events-btn ${this.state.allActive}`}
+          onClick={()=> this.setState({
+            allActive: true,
+            addActive: false,
+            favoritesActive: false
+          })}
           >
         <Link to="/"
           className='link'>
@@ -30,7 +33,12 @@ render() {
          </Link>
         </button>
         <button
-          className='addEvent-btn'
+          className={`addEvent-btn ${this.state.addActive}`}
+          onClick={()=> this.setState({
+            allActive: false,
+            addActive: true,
+            favoritesActive: false
+          })}
         >
         <Link to="addnewevent"
           className='link'> <p className='button-text'>+</p> </Link>
@@ -40,10 +48,15 @@ render() {
            <p className='button-text'>FILTER</p>
         </button>
         <button
-          className='favorites-btn'
+          className={`favorites-btn ${this.state.favoritesActive}`}
           >
         <Link to="favorites"
           className='link'
+          onClick={()=> this.setState({
+            allActive: false,
+            addActive: false,
+            favoritesActive: true
+          })}
           > <p className='button-text'>♡</p> </Link>
         </button>
       </nav>

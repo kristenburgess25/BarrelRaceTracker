@@ -25,7 +25,6 @@ class Favorites extends Component {
     return (
       <div className="favorites-list">
         <div>
-          <h2>Favorites</h2>
           { favorites }
         </div>
       </div>
