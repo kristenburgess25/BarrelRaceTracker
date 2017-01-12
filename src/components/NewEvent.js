@@ -52,8 +52,11 @@ class NewEvent extends Component {
     let inputFields = Object.keys(this.state)
 
 const form = inputFields.map(field =>
-  <div className='new-input-field'>
-    <p className='input-label'>  {field} : </p>
+  <div className='new-input-form'>
+    <div>
+    <p className='input-label'>  {field.toUpperCase()} </p>
+    </div>
+        <div>
            <input
            className={`${field}-input new-event-input`}
             value={this.state[field]}
@@ -63,6 +66,7 @@ const form = inputFields.map(field =>
                })
              }
            />
+          </div>
          </div>)
 
     return (
@@ -72,7 +76,7 @@ const form = inputFields.map(field =>
         disabled={this.toggleSaveButton()}
         className='save-event-button'
         onClick={(e) => this.addNewEvent(e)}
-     >Save Event
+     >SAVE NEW EVENT
       </button>
       </section>
       )
