@@ -17,7 +17,7 @@ render() {
 
     return (
       <section className="App-header">
-        <h2 className='title'>Barrel Race Tracker</h2>
+        <h2 className='title'>Can Chaser</h2>
         <nav>
         <button
           className={`all-events-btn ${this.state.allActive}`}
