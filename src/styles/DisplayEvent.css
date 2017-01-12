@@ -16,6 +16,7 @@ h4 {
   background-color: white;
   text-align: center;
   margin: auto;
+  border-radius: 5px;
 }
 
 .date-container{
@@ -59,10 +60,16 @@ background-size: 20px;
 .labels-container {
   width: 23%;
   text-align: left;
-  margin-left: 0px;
   background-color: gray;
   height: 100%;
   color: white;
+  margin-left: 0px;
+}
+
+.labels, .values {
+  font-size: 12px;
+  margin-left: 0px;
+  padding: 0px;
 }
 
 .values-container {
@@ -78,4 +85,8 @@ span {
 .top-block {
   display: flex;
   margin: 0px;
+}
+
+.description-text {
+  font-size: 12px;
 }

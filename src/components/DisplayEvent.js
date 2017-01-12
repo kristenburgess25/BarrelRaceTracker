@@ -81,7 +81,7 @@ toggleFavorite() {
           </div>
           <div className='values-container'>
             <p className='values'> $ {event.entryfee} </p>
-            <p className='values'> {event.payout} </p>
+            <p className='values'> {event.payout? event.payout: 'N/A'} </p>
           </div>
 
 
@@ -97,7 +97,7 @@ toggleFavorite() {
 
 
           <h4> Description </h4>
-          <p> {event.description}</p>
+          <p className='description-text'> {event.description}</p>
 
       </section>
     </section>
