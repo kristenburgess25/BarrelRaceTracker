@@ -73,6 +73,10 @@ background-size: 20px;
   padding: 0px;
 }
 
+.values {
+  color: black;
+}
+
 .values-container {
   width: 70%;
   text-align: left;
