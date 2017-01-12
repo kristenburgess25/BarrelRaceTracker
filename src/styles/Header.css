@@ -1,9 +1,8 @@
 button {
   border: none;
-  font-size: fill;
-  text-decoration: none;
   border-radius: 5px;
   width: 25%;
+  font-size: 18px;
 }
 
 button:hover {
@@ -12,11 +11,6 @@ button:hover {
 
 button.true {
   background-color: #0F6669;
-}
-
-.button-text {
-  text-align: center;
-  padding: 0px;
 }
 
 nav {
@@ -39,7 +33,7 @@ justify-content: space-between;
   }
 
 .title {
-  font-size: 50px;
+  font-size: 55px;
   font-family: 'Pacifico', cursive;
   letter-spacing: 4px;
   text-align: center;

@@ -64,13 +64,13 @@ toggleFavorite() {
         <h4> Details </h4>
           <div className='labels-container'>
             <p className='labels'>Location: </p>
-            <p className='labels'>Added $$: </p>
+            <p className='labels'>Added $: </p>
             <p className='labels'>Time: </p>
           </div>
           <div className='values-container'>
-          <p className='values'>  {event.location} </p>
-          <p className='values'>  {event.addedmoney} </p>
-          <p className='values'>{time} </p>
+          <p className='values'>  {event.location?event.location:'N/A'} </p>
+          <p className='values'>  $ {event.addedmoney?event.addedmoney:'N/A'} </p>
+          <p className='values'>{time?time:'N/A'} </p>
           </div>
 
 
@@ -80,7 +80,7 @@ toggleFavorite() {
             <p className='labels'>Payout:</p>
           </div>
           <div className='values-container'>
-            <p className='values'> $ {event.entryfee} </p>
+            <p className='values'> $ {event.entryfee?event.entryfee:'N/A'} </p>
             <p className='values'> {event.payout? event.payout: 'N/A'} </p>
           </div>
 
@@ -92,7 +92,7 @@ toggleFavorite() {
           </div>
           <div className='values-container'>
             <p className='values'> {event.contactName} </p>
-            <p className='values'> {event.contactNumber} </p>
+            <p className='values'> {event.contactNumber?event.contactNumber:'N/A'} </p>
           </div>
 
 
