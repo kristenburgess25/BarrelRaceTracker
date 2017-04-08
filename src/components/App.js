@@ -8,7 +8,7 @@ import SearchBar from './SearchBar';
 import Filter from './Filter';
 import { map, extend } from 'lodash';
 import firebase, { reference } from '../firebase';
-import { BrowserRouter, Match } from 'react-router'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { render } from 'react-dom';
 
 
@@ -73,21 +73,21 @@ showFilter(e) {
           eventList={eventList}
           filteredDisplay={this.filteredDisplay.bind(this)}
         />
-        <Match exactly pattern="/" render={()=> (
+      <Route exact path="/" render={()=> (
             <EventList
               eventList={filteredEvents?filteredEvents:eventList}
               toggleFavorite={this.toggleFavorite.bind(this)}
             />
           )}
         />
-        <Match exactly pattern="/favorites" render={()=> (
+      <Route exact path="/favorites" render={()=> (
             <Favorites
               eventList={filteredEvents?filteredEvents:eventList}
               toggleFavorite={this.toggleFavorite.bind(this)}
             />
           )}
         />
-        <Match exactly pattern="/addnewevent" render={ () => ( <NewEvent/>)}/>
+      <Route exact path="/addnewevent" render={ () => ( <NewEvent/>)}/>
       </div>
       </BrowserRouter>
     );
