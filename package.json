@@ -23,9 +23,6 @@
     "react-addons-test-utils": "^15.4.1",
     "react-scripts": "^0.8.4",
     "react-test-renderer": "^15.4.1",
-    "redux-devtools": "^3.3.1",
-    "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-log-monitor": "^1.1.1",
     "sinon": "^1.17.6",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
@@ -34,17 +31,12 @@
     "classnames": "^2.2.5",
     "es6-promise": "^4.0.5",
     "firebase": "^3.6.4",
-    "google-maps-react": "^1.0.19",
     "lodash": "^4.17.3",
     "moment": "^2.17.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.0.6",
     "react-router": "^4.0.0-alpha.6",
-    "redux": "^3.6.0",
-    "redux-logger": "^2.7.4",
-    "redux-react-firebase": "^2.3.5",
-    "redux-thunk": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -48,6 +48,9 @@ filteredDisplay(filteredEvents) {
   this.setState({filteredEvents: filteredEvents});
 }
 
+showFilter(e) {
+  this.setState()
+}
 
 showFilter(e) {
   this.setState({hideFilter: !this.state.hideFilter})
