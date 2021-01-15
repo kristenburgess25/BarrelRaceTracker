@@ -3,4 +3,5 @@ This application was build using create-react-app and was designed/built with th
 The purpose of this application is to track barrel racing events and be able to sort and filter them for comparison. 
 
 This application was created as a self-directed project during my third module at Turing School.
-It is a work in progress that I plan to build on considerably.
+
+[CanChaser](https://i.imgur.com/xayzUlA.jpg)
