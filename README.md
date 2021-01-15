@@ -4,4 +4,4 @@ The purpose of this application is to track barrel racing events and be able to 
 
 This application was created as a self-directed project during my third module at Turing School.
 
-[CanChaser](https://i.imgur.com/xayzUlA.jpg)
+![CanChaser](https://i.imgur.com/xayzUlA.jpg)
